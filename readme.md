@@ -41,3 +41,6 @@ break;
 }
 <hr>
 </pre>
+
+https://superuser.com/questions/1033563/how-to-download-video-with-blob-url
+https://stackoverflow.com/questions/58010070/how-to-download-video-with-javascript
