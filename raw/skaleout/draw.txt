@@ -1,0 +1,121 @@
+Skip to the download
+
+free skill · animation in code
+
+Claude can be your animation studio
+
+Drop in a style you love, name a topic, and Claude Code plans the shots, draws them in code, adds the sound and hands you an MP4. Here is the skill and every step.
+
+Download the skill
+The skill
+
+One ZIP with the animation skill for Claude Code. It runs on your own computer (Mac or Windows), so open this page there to download it.
+
+Download the ZIP
+
+19 KB · free · no sign up
+
+Keep the ZIP where it lands, usually your Downloads folder. You don't need to open it: in step 1 Claude puts the skill where it belongs.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+The guide
+
+Five steps. The first one you do once; after that every new animation starts at step 2.
+
+Open Claude and let it set up the rest
+
+Open the Claude desktop app and switch to its Code tab, at the top of the sidebar. Don't have it yet? Download it free from Anthropic's website, install it and sign in with your Claude account:
+
+Download the Claude app
+
+In the row under the message box, click the folder button, choose Open folder… and pick your Downloads folder. Drag the animation-skill.zip you downloaded into the chat, then paste this prompt and press Enter.
+
+Set up my computer for the animation skill. I just dropped animation-skill.zip in here. Check whether Node.js 18 or newer and ffmpeg are installed. If either is missing, install it without admin rights and without asking for my password: download the official Node.js build and a ready-made ffmpeg build into a folder called tools in my user folder, and make sure you and new Claude sessions can find them. Do not use Homebrew or anything that needs my password. Then install the skill from the zip where Claude Code finds skills (on a Mac ~/.claude/skills/animation/, on Windows %USERPROFILE%\.claude\skills\animation\, with SKILL.md directly in that folder). Finally check that Node.js and ffmpeg both work, tell me their versions and where the skill is, and if anything failed tell me exactly what to do.
+Copy
+
+Claude installs the free tools that turn the animation into a video, puts the skill in place and tells you when it is done.
+
+Tip If Claude asks for permission to run the install steps, say yes. If Claude says something is still missing right after installing it, quit and reopen the Claude app, then ask it to check again.
+
+Find a style you love and save it
+
+A painting, a Pinterest pin, a still from a film: anything with the look you want. Save 1 to 3 images (right-click, Save Image As) into one folder, for example your Desktop.
+
+Tip Pick images that share one look: same colours, same texture, same kind of line. Three different styles at once give Claude mixed signals. A screenshot works too (Mac: Cmd+Shift+4, Windows: Win+Shift+S).
+
+Start a new session in an empty folder
+
+Make a new empty folder for this animation, for example my-animation on your Desktop (right-click the Desktop, then New Folder on a Mac, or New, Folder on Windows).
+
+In the Code tab start a new session. In the row under the message box, click the folder button, choose Open folder… and pick that new folder. In the same row, open the model picker, choose Opus 5.5, and under Effort choose High.
+
+Now drag your 1 to 3 images straight into the message box. Each one shows up there.
+
+Tip Claude asks before it runs a step or saves a file. Allow it each time so it can keep working; the permission setting in the row under the message box changes how often it asks. If dragging does nothing, click + next to the message box and add the images from there.
+
+Load the skill and tell it what you want
+
+In the same message as your images, type /animation followed by three things: the topic, the length and the format. A full example:
+
+/animation Make a 20 second animation about how a tiny seed grows into a huge oak tree over one year: spring rain, summer sun, autumn leaves, a snowy winter. Format: 9:16 vertical for Instagram Reels. Use the look of the images I attached for everything: their colours, textures and brush marks. Add soft music and sound effects that fit each season, and give me the final MP4.
+Copy
+
+Tip Format is 9:16 for Reels, TikTok and Shorts, 1:1 for a square feed post, 16:9 for YouTube. Without a length it makes 30 seconds. Start short (10 to 20 seconds): you get your first result sooner and can ask for a longer one after.
+
+Let it work, then ask for fixes
+
+Claude now writes a short style guide from your images (colours, texture, light), splits your topic into shots of 2 to 5 seconds, draws every shot in code, makes the music and sound effects in code too, renders the video, then looks at a contact sheet of its own frames and fixes what is off (up to three rounds). It shows you the style guide and may ask a question: just answer in plain words. Plan on half an hour or more; leave the app open while it works.
+
+Watch the result and say what you want changed, the way you would tell a person: "the tree is too small, make it twice as big", "shot 2 is too fast, hold it longer", "the music is too loud", "make the snow fall slower". It changes only that and renders again.
+
+When it is done, the MP4 is inside your animation folder, next to the contact sheet Claude checked, and Claude tells you exactly where. To see it, just ask: "open the folder with the video".
+
+Tip If it stops halfway or you hit your usage limit, wait until the limit resets, open the same session again from the list in the sidebar, and type "carry on where you stopped".
+
+Clips from the reel
+
+These are from my reels, drawn in code with Claude. They were made before this skill existed, over several rounds of feedback, so they are not one-shot results of the skill. They show what painting in code can look like.
+
+01 Watercolour koi
+02 Mosaic turtle
+03 Ink cranes
+04 Woodblock whale
+05 Pixel whale
+06 Noir whale
+Questions
+Does it cost money?
+
+The skill and this guide are free, and so are the Claude app and the tools Claude installs in step 1. To use Claude Code you need a paid Claude plan (Pro or Max). An animation is a long job, so on Pro you may hit the usage limit and have to wait for it to reset; Max gives you much more room. If the model picker does not show Opus 5.5 on your plan, pick the strongest model it shows.
+
+How long does it take?
+
+Setup (step 1) takes about 10 minutes, once. After that, plan on half an hour or more for a 15 to 20 second clip, longer for longer clips or many shots. Each fix round is shorter, because Claude only redoes the part you asked about.
+
+Why does mine look different from the reel?
+
+Every run is drawn fresh, and your references set the look, so no two results match. The clips on this page also went through several rounds of feedback. Expect a simpler first version and steer it: say exactly what you see and what you want instead, one or two changes at a time. Clearer references (one consistent style) give the biggest jump in quality.
+
+Can I use it commercially?
+
+Yes, the animations you make are yours to post, sell and use in client work. Use your references for the look, not as artwork to copy: if you post commercially, do not reproduce someone else's painting or character. Check Anthropic's terms for your plan for the details.
+
+Does it work on Windows?
+
+Yes. The Claude desktop app runs on Windows, and the setup prompt in step 1 installs what the skill needs there too. Everything else is the same as on a Mac.
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

@@ -1,0 +1,133 @@
+Skip to the prompt
+
+free tutorial · 1 prompt, 10 styles
+
+Ten Styles
+
+With one prompt in Claude and GPT
+
+Get a 4 second looping animation of a spinning ball you can post, starting from one prompt. Nothing to install.
+
+Get the prompt
+One prompt, ten styles
+
+These clips were built in Claude Code with a few rounds of fixes, and the prompt below describes the same ball. One send gives you a first take of the same idea. To get closer, ask for changes in the same chat.
+
+01 Doodle
+02 Dan Koe
+03 CRT
+04 Fur
+05 Thermal
+06 Matrix
+07 Pixel art
+08 Paper
+09 Synthwave
+10 Blueprint
+The prompt
+
+Pick a style, tap Copy, paste it into the chat. That gets you a first take.
+
+1. Pick a style
+
+Doodle
+Dan Koe
+CRT
+Fur
+Thermal
+Matrix
+Pixel art
+Paper
+Synthwave
+Blueprint
+Write your own
+
+2. Copy and paste
+
+prompt.txt
+style: Doodle
+Copy
+Create one self-contained HTML file that plays a 4 second seamless looping animation in a 9:16 frame (a 1080x1920 canvas scaled to fit the window, black outside it). Draw everything in code with the Canvas 2D API: no images, no external files, no libraries.
+
+Subject: a spinning ball made of thousands of small marks (streaks, characters, hairs, dots or lines, whatever fits the style), centred a little above the middle and filling about 80 percent of the width. It rotates one full turn every 4 seconds about a tilted axis, so the marks on its front flow in one direction across the surface and the outline stays a perfect circle. Only draw the front half of the sphere, so it reads as a solid ball that is clearly spinning.
+
+Style: a cartoon doodle mural: a pink ball with thick black outlines, spots and little eyes, on cyan packed with hand-drawn creatures, lines wobbling like hand-drawn frames. Commit to this style completely: the ball's material, the background, the palette and the texture should all feel like it. Fill the background with a full scene in that style, not a flat colour, and give it its own subtle motion that also loops every 4 seconds.
+
+No text on screen. Reply with only the HTML file.
+
+Want something other than a ball? Change the Subject paragraph: a planet, a donut, your logo on a coin. Keep the 4 second turn as it is: it makes the loop work.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+Open Claude or ChatGPT
+
+Go to claude.ai or chatgpt.com and start a new chat.
+
+Tip Free accounts may work. A paid plan is faster and handles long answers better.
+
+Pick, copy, paste, send
+
+Pick a style above, tap Copy, paste it into the chat and send it.
+
+Tip It can think for several minutes. The answer is one HTML file, so let it finish.
+
+Preview it
+
+In Claude the HTML shows up as an artifact you can watch right in the chat. In ChatGPT open it in the canvas preview if it shows one.
+
+Tip No preview? Copy the code into a file named ball.html and open it in your browser.
+
+Black screen or an error?
+
+Type "fix the error" in the same chat, or simply send the prompt again in a new chat.
+
+Tip That is normal. Some styles need a second try.
+
+Turn it into a video
+
+Make the browser window tall (or use your phone) and screen record about 4 seconds: on a Mac press Cmd+Shift+5, on Windows press Win+Alt+R (Xbox Game Bar) or use the Snipping Tool's record, on iPhone or Android use the built-in screen recorder. Then crop it to 9:16 in the Instagram editor or CapCut.
+
+Tip It loops every 4 seconds, so any 4 seconds work.
+
+Post it
+
+Post the loop on its own, or put several inside your own reel the way Jan did with ten styles.
+
+Tip Run the same style twice and keep the better one. Every run is a new drawing.
+
+Questions
+Why does it take minutes?
+
+The chat writes a whole animation program from scratch, often hundreds of lines of code, and plans it before it writes. A few minutes is normal. Keep the tab open until it is done.
+
+Does it cost money?
+
+The prompt and this tutorial are free. Claude and ChatGPT both have free plans you can try. Free plans have limits and may stop long answers early, so a paid plan works more reliably. There is nothing else to buy or install.
+
+Can I use it commercially?
+
+The animation code the chat writes for you is yours to post, edit and use. Check each tool's terms for the details that apply to your plan.
+
+Can I change the subject?
+
+Yes. Rewrite the Subject paragraph with anything you like and keep the rest of the prompt. Pick a style above or type your own with "Write your own".
+
+Why does my ball look different?
+
+Every run is a new drawing. The same prompt gives a different ball each time, even in the same style. The clips above also took a few rounds of fixes, so expect your first take to be simpler. Send it again for another take, or tell the chat what to change, for example "make the background busier" or "use more, finer strokes on the ball".
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

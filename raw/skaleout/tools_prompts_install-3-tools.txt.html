@@ -1,0 +1,30 @@
+<html><head><meta name="color-scheme" content="light dark"></head><body><pre style="word-wrap: break-word; white-space: pre-wrap;">Install three free tools for me, one after the other. Before each step, tell me in one line what you are about to do. If a step fails, show me the error and one thing to try, then go on with the next tool. Use only the commands below and only these official sources. Change nothing else on my computer: no other settings, keys or environment variables. If a command needs git and git is missing, tell me to install it from https://git-scm.com and go on.
+
+1. Ponytail (a skill that makes you solve a task with less code)
+   Source: github.com/DietrichGebert/ponytail
+   Run: claude plugin marketplace add DietrichGebert/ponytail
+   Then run: claude plugin install ponytail@ponytail
+
+2. Graphify (builds a map of a project, so you find a file without reading all of them)
+   Source: github.com/Graphify-Labs/graphify, package name graphifyy (with two y)
+   It needs uv. Check with: uv --version
+   If uv is missing, install it with the official installer. macOS and Linux: curl -LsSf https://astral.sh/uv/install.sh | sh
+   Windows: powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+   Run: uv tool install graphifyy
+   Then run: graphify install
+   If the graphify command is not found, run: uv tool update-shell
+   and tell me to open a new terminal, start Claude Code again and send this prompt again.
+
+3. OmniRoute (a free gateway on my computer that sends requests to free AI providers and switches when one runs out)
+   Source: github.com/cheaper-inference/OmniRoute, npm package omniroute
+   It needs Node.js 22.22 or newer (24 is fine). Check with: node --version
+   If Node.js is missing or older, skip this tool and tell me to install Node.js from https://nodejs.org first.
+   Run: npm install -g omniroute
+   If npm says it blocked install scripts, run this line: npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
+   Do not start OmniRoute and do not point any of my tools at it. I will do that myself.
+
+When all three steps are done, check each tool (claude plugin list, graphify --version, omniroute --version) and give me one table with these columns: tool, installed (yes or no), version, note (why it was skipped or what failed). Under the table write these three lines:
+Ponytail: close Claude Code and open it again. It is on in every new session.
+Graphify: open a project in Claude Code and type /graphify .
+OmniRoute: run omniroute in a terminal and leave it open, open http://localhost:20128, add a free provider under Providers, then start Claude Code in a second terminal with: omniroute run claude --model auto
+</pre></body></html>

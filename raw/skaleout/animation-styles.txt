@@ -1,0 +1,190 @@
+Skip to the prompts
+
+free tutorial · 10 animation styles
+
+10 Animation Styles
+
+With Claude and ChatGPT
+
+Every clip is a painting drawn in code and brought to life: no video model, no After Effects. Here are the three prompts behind each one, ready to copy. Nothing to install.
+
+Get the prompts
+The ten styles
+
+How these were made: each clip started as one painting, then it was animated, then polished over a few rounds of feedback in the same chat. That took 30 to 90 minutes per clip. The prompts below are those three rounds. Your first version comes back in minutes and will look simpler; each fix round brings it closer.
+
+01 Watercolour
+02 Roman Mosaic
+03 Sumi-e Ink
+04 Impasto Oil
+05 Nocturne Gouache
+06 Botanical Plate
+07 Paper Cut
+08 Art Nouveau
+09 Golden Hour
+10 Ghibli Style
+The prompts
+
+Pick a style: the two prompts below update. Prompt 1 starts a new chat, prompt 2 goes into that same chat.
+
+Pick a style
+
+Watercolour
+Roman Mosaic
+Sumi-e Ink
+Impasto Oil
+Nocturne Gouache
+Botanical Plate
+Paper Cut
+Art Nouveau
+Golden Hour
+Ghibli Style
+Write your own
+1. Paint the picture
+
+Start a new chat and send this. You get one still painting back.
+
+prompt-1.txt
+style: Watercolour
+Copy
+Create one self-contained HTML file that shows a single still painting in a 9:16 frame: a 1080x1920 canvas scaled to fit the window, black outside it. Draw everything in code with the Canvas 2D API: no images, no external files, no libraries. Use a seeded random number generator so the picture looks the same on every load.
+
+Scene: A koi pond seen from straight above: three koi (red, orange, and white with red patches) glide between green lily pads and one pink lotus over blue-green water.
+
+Style: Watercolour on cold-press paper: soft washes with blooms and hard dried edges, pigment granulation, a few small splatters, the paper grain showing through. Only a few colours: warm koi against a cool blue-green pond.
+
+It must look like a real piece made in that medium, not a digital filter: real texture, uneven edges, the marks a hand and a tool would leave. No flat vector shapes and no plain digital gradients.
+
+Draw the main subject, every other creature and each depth layer of the background in its own function, so the picture can be animated later. Keep the main subject in the middle half of the frame with room around it to move. No text on screen. Reply with only the HTML file.
+
+2. Bring it to life
+
+When you like the painting, send this in the same chat.
+
+prompt-2.txt
+style: Watercolour
+Copy
+Now turn this painting into a 6 second animation (180 frames at 30 fps) that starts again when it ends. Keep the look exactly as it is: every colour, texture and shape stays the same, and frame 0 shows the full painting.
+
+What happens: The koi glide along slow curving paths, each at its own pace, their bodies flexing in an S wave from head to tail with the fins trailing behind. The lily pads drift and turn a little, soft ripple rings spread from the pads and from the lead fish, and one sun glint crosses the water.
+
+Rules:
+1. Everything lives. Every painted element moves all the time: the main subject with purpose, everything else with small idle motion.
+2. How it moves in this medium: Ripples are soft, broken painted rings that fade as they grow. The paint moves, but the paper grain stays fixed to the frame.
+3. Every movement has a reason inside the scene: wind, current, light, or the subject passing by.
+4. The subject's own action reads at a glance: big, clear poses (wingbeats, strokes, steps), never a tiny wobble. It travels through its world, and the camera keeps it in the middle half of the frame: a slow push in from the full painting to about 1.3x, a soft follow, and the world sliding past behind it, the near layers faster than the far ones.
+5. Smooth: every position and angle moves on an eased curve, with no jumps.
+
+Base every frame on the elapsed time (frame = seconds x 30), so it plays at the same speed on any computer. Paint the textured layers once into offscreen canvases when the page loads and only move and combine them each frame, so it plays smoothly. Reply with only the full HTML file.
+
+3. Polish it
+
+Watch it, then send the fix that fits, one at a time, in the same chat. The clips above took a few of these rounds each.
+
+The subject barely moves
+The main subject barely moves. Make its own action twice as big and let it travel further through the scene, while the camera keeps it in the middle of the frame.
+
+Copy
+
+Parts of the picture stand still
+Some parts of the picture never move. Give every element a small idle motion that makes sense in the scene, like wind, water or light.
+
+Copy
+
+It looks digital
+It looks like a digital filter, not the real medium. Add more of the medium's texture: uneven edges, visible tool and brush marks, the paper or canvas showing through. Keep the motion as it is.
+
+Copy
+
+It stutters or plays slowly
+It stutters or plays slowly. Paint every textured layer once into an offscreen canvas when the page loads, and each frame only move and combine those canvases. Repaint only what changes shape.
+
+Copy
+
+It jumps or snaps
+Some movements jump or snap. Put every position, angle and brightness on a smooth eased curve, with no sudden switches from one frame to the next.
+
+Copy
+
+Black screen or an error
+The page shows a black screen or an error. Find the error, fix it and send the full HTML file again.
+
+Copy
+
+Want another subject? Tap "Write your own" and type any scene and any medium. Describe the medium the way the ten styles do: the material, the tools, the texture, the colours.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+Open Claude or ChatGPT
+
+Go to claude.ai or chatgpt.com and start a new chat.
+
+Tip A paid plan works best: these answers are long, and a free plan may cut them off.
+
+Send prompt 1
+
+Pick a style above, copy prompt 1, paste it into the chat and send it. You get back one HTML file with the painting.
+
+Tip It can think for several minutes. Let it finish. If it stops halfway, type "continue".
+
+Look at it
+
+In Claude the HTML shows up as an artifact right in the chat. In ChatGPT open it in the canvas preview; if there is none, use the tip below.
+
+Tip No preview? Copy the code into a file named painting.html and open it in your browser. Not happy with the painting? Say what to change before you animate it, for example "make the koi bigger" or "more paper texture".
+
+Send prompt 2, then the fixes
+
+In the same chat send prompt 2. Watch the animation, then send the fix lines under "3. Polish it" that fit, one at a time.
+
+Tip Black screen? Send the last fix line. If a chat gets stuck, start a new one with prompt 1.
+
+Turn it into a video
+
+Open the animation big (the artifact in Claude, or the saved HTML file in your browser), make the window tall (or use your phone) and screen record it: on a Mac press Cmd+Shift+5, on Windows press Win+Alt+R (Xbox Game Bar) or use the Snipping Tool's record, on iPhone or Android use the built-in screen recorder. Then crop it to 9:16 in the Instagram editor or CapCut.
+
+Tip Reload the page right before you record, so you catch it from the first frame.
+
+Post it
+
+Post one style on its own, or put several in one reel the way Jan did with these ten.
+
+Tip Run the same style twice and keep the better one. Every run is a new painting.
+
+Questions
+Why does it take minutes?
+
+The chat writes a whole painting program from scratch, often hundreds of lines of code, and plans it before it writes. A few minutes per answer is normal. Keep the tab open until it is done.
+
+Does it cost money?
+
+The prompts and this tutorial are free. Claude and ChatGPT both have free plans you can try, but they have limits and may stop long answers early, so a paid plan works more reliably. There is nothing else to buy or install.
+
+Can I use it commercially?
+
+The animation code the chat writes for you is yours to post, edit and use. Check each tool's terms for the details that apply to your plan.
+
+Can I change the subject?
+
+Yes. Tap "Write your own" and type your scene and your style, or keep a style: paste prompt 1, change only the Scene line and keep the Style line.
+
+Why does mine look different?
+
+Every run is a new painting, and the clips above went through a few rounds of fixes. Expect your first version to be simpler. Send the fix lines, or say exactly what you see and what you want instead, for example "the whale's fins are too small" or "the mist should drift slower".
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

@@ -1,0 +1,144 @@
+Skip to the prompt
+
+free prompt · ChatGPT · 1 photo in, 1 poster out
+
+Turn a plain product photo into a studio poster
+
+Attach your photo, paste one prompt, and get a print style ad poster. Nothing to install.
+
+Get the prompt
+Photo in, poster out
+
+Five products, five posters. Each pair: the plain photo on the left, the poster ChatGPT made from it on the right.
+
+your photo
+the poster
+poster coming
+01 Senda coffee, headline SENDA
+your photo
+the poster
+poster coming
+02 Wireless headphones, headline LULL
+your photo
+the poster
+poster coming
+03 Calle olive oil, headline CALLE
+your photo
+the poster
+poster coming
+04 Trail shoe, headline SCREE
+your photo
+the poster
+poster coming
+05 Table lamp, headline NOOK
+
+Each poster: one product photo and this prompt in ChatGPT.
+
+The prompt
+
+Change the six fields to fit your product. The prompt below updates as you type.
+
+Background colour
+Headline colour
+Headline (your brand name)
+Small line under it
+A real place for the product
+One light
+prompt.txt
+paste it into ChatGPT with your photo
+Copy
+Turn the product in my photo into a premium print ad poster. The product must stay exactly as it is in the photo: same shape, same colours, same label, same words. Build the poster around it. Do not add any text to the product itself. Format: one full-bleed portrait poster, 9:16, high resolution. No mockup, no frame, no border. Taste rules: Two main colours only: deep navy blue for the background and burnt orange for the headline. The product keeps its own colours. One huge headline, tightly spaced condensed type, across the top third: SENDA. Under it one small line in the same typeface: WHOLE BEAN COFFEE. Put the product in a real place: a worn oak kitchen counter next to a small hand grinder. Light it with one light: low morning sun through a window, one long shadow. Lots of empty space. A faint printed paper grain. No stickers, badges, arrows, glow, sparkles, extra slogans or extra fonts. Spell every word exactly as written above.
+
+The six highlighted parts are your fields: the two colours, the headline, the small line under it, the place and the light. An empty field keeps the example (a coffee bag called SENDA).
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+
+Six steps, about five minutes.
+
+Open ChatGPT and start a new chat
+
+Go to chatgpt.com and sign in. Click New chat at the top of the left sidebar.
+
+Tip A fresh chat matters. An old chat can pull its old style into your poster.
+
+Attach your product photo
+
+Click the + button at the left of the message box and choose Add photos & files. Pick one photo of your product. Wait until the small thumbnail shows in the box.
+
+Tip A plain photo of the product on a light background works best. One product, nothing else in the picture.
+
+Paste the prompt and send
+
+Click in the message box, paste the prompt you copied above and press Enter. ChatGPT draws the poster. It takes about a minute.
+
+Tip If ChatGPT only answers with text, send this one line: make the image now.
+
+Check the spelling of the headline
+
+Read every word on the poster. Image tools sometimes swap a letter in a headline.
+
+Tip If a word is wrong, reply: fix the spelling of HEADLINE, keep everything else (put your real headline in place of HEADLINE).
+
+Download the image
+
+Click the poster to open it, then click the download arrow at the top right. On a phone, press and hold the image and choose Save.
+
+Tip Post it as it is, or print it. The image keeps full size.
+
+Try another background and headline pair
+
+Change the two colours or the headline above, copy the new prompt and send it in a new chat with the same photo.
+
+Tip Pick the two colours from your product: its main colour for the headline, a calm neighbour of it for the background.
+
+Optional: let Claude fill in the six fields
+
+Not sure which colours, place and light fit your product? This small Claude skill reads your photo or your description, picks the six fields and gives you the full prompt, ready to paste into ChatGPT.
+
+Download the skill
+
+poster-prompt-skill.zip · free · no sign up
+
+Open claude.ai, then click your name, Settings, Capabilities, Skills.
+Upload poster-prompt-skill.zip. Then start a chat, attach your product photo and ask: fill in the poster prompt for this product.
+
+Not yet tested. The prompt above is the tested part.
+
+Questions
+Does it cost money?
+
+The prompt and this page are free. You need a ChatGPT account. The free plan allows only a few images per day, so if ChatGPT says you hit the limit, try again later or use a paid plan.
+
+Why is some text on my poster wrong?
+
+Image tools sometimes swap or drop a letter. Reply with: fix the spelling of HEADLINE, keep everything else, with your real headline in place of HEADLINE. A short headline of one word is the safest.
+
+Can I use it for clients?
+
+Yes. It is your photo and your poster, so you can use it for your own brand or for a client's product. Only use photos you have the right to use.
+
+My product has no brand name.
+
+Any short word works as the headline: the product name, the kind of product, or an invented name. Keep it to one or two words so it stays big and sharp.
+
+Why does mine look different from the examples?
+
+Every run is a new take, and your photo, colours and place are different from ours. Send the same prompt again in a new chat for another take.
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

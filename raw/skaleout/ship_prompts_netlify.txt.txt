@@ -1,0 +1,38 @@
+Put the website in this folder online on a public link with Netlify (free hosting). This chat is open on the folder that holds my website. Work only in this folder: do not change or delete anything outside it, and do not change my website's files unless a step below says so.
+
+1. Check the folder. Look at what is in it and tell me in one line what you found. If there is no index.html and no package.json, stop and tell me: "This folder has no website yet. Ask me to build one first."
+   Then find the folder to publish:
+   - A plain site (an index.html, no package.json with a "build" script): the folder to publish is this folder, ".".
+   - A project with a package.json that has a "build" script (for example Vite, React, Astro): run "npm install", then "npm run build". The folder to publish is the build output, usually "dist", "build" or "out" (the build prints it). It must contain an index.html.
+
+2. Check Node.js. Run: node --version
+   Netlify's command line tool needs Node.js 22 or newer. If node is missing or older, stop and tell me: "Install Node.js from https://nodejs.org (the LTS download), then quit and reopen this app, open the same folder and paste this prompt again." Never ask for or type my computer password.
+
+3. Install the Netlify command line tool: npm install -g netlify-cli
+   Then check it: netlify --version
+   If the install fails with a permission error (EACCES), do not use sudo. Show me the error and this guide: https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally
+
+4. Log in. Run: netlify login
+   If it says "Already logged in", go to step 5. Otherwise let it wait for me for up to 10 minutes: it opens my browser. Tell me: "Log in or sign up in the browser window (the free plan is enough) and click Authorize." If no browser opens, run: netlify login --request "Claude Code deploy"
+   show me the link it prints, wait until I say "done", then run: netlify login --check <the ticket id it printed>
+   Never ask me for a password or a token in this chat.
+
+5. Deploy to production. Check whether this folder is already linked to a Netlify project: a file ".netlify/state.json" exists in it.
+   - Not linked yet (the first time): run, inside this folder:
+     netlify deploy --prod --dir <folder to publish> --no-build --site-name <name>
+     where <name> is this folder's name in lowercase with only letters, digits and hyphens. This creates the project and links this folder to it. If the name is taken, Netlify adds a short code to it by itself. If it asks for a team, use my only team, or ask me which one.
+   - Already linked: run: netlify deploy --prod --dir <folder to publish> --no-build
+   If this folder is a git repository, make sure ".netlify" is listed in .gitignore. If the deploy fails, read the error, fix what is wrong in my website and run it once more. If it still fails, tell me the error in plain words. A failed deploy never replaces what is already live.
+
+6. Give me the live link. The link to share is the "Production URL" the deploy prints (it ends in .netlify.app), not the "Unique deploy URL". Check it with: curl -sI <link>
+   - It answers 200: write "Your site is live: <link>"
+   - Anything else: new Netlify teams start every new project as private, so only I can see it. Tell me to open https://app.netlify.com/projects/<project name>/configuration/general#project-visibility (fill in the real project name), click Edit visibility, choose Public and Save. This is needed once per project. Wait until I say "done", check again, then give me the link.
+
+7. Save a note so next time takes one sentence. Add the lines below to the end of my global Claude Code memory file ~/.claude/CLAUDE.md (create the file if it does not exist, keep everything already in it, and add the lines only if they are not there yet):
+
+## Put it online
+When I say "put it online", deploy the current folder to production with Netlify: if the folder has a package.json with a "build" script, run "npm run build" first; then run "netlify deploy --prod --dir <folder to publish> --no-build" in that folder (the folder to publish is "." for a plain site, or the build output such as "dist") and reply with the Production URL (the .netlify.app address). Later deploys of the same folder update the same link. If I am logged out, run "netlify login" first and wait for me to approve it in the browser.
+
+If you are a coding agent other than Claude Code, save the same lines in your own global memory or instructions file instead and tell me which file you used.
+
+Last, tell me: "Done. From now on, change your site and say: put it online."

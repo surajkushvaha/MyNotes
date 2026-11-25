@@ -1,0 +1,107 @@
+Skip to the steps
+
+free setup guide · claude code and api
+
+Claude Opus 4.6
+with APInex
+
+Use the prompts below to set up Claude Code or connect your own app. APInex lists Opus 4.6 at $0 per token with a paid subscription.
+
+Start at step 1
+Anthropic's official price, platform.claude.com, 18 Nov 2026
+APInex per-token pricing, captured 18 Nov 2026. The current catalog lists Opus as subscription only.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+Sign up with Google
+
+Open apinex.bond/register. Tick the box I accept the Privacy Policy and Terms of Use, then click Continue with Google and pick your Google account.
+
+The sign up card, 18 Nov 2026
+
+Tip The card says it takes a personal @gmail.com account only, so a work or school Google address will not get in. Use a Gmail account you are fine linking to a third-party service.
+
+If it fails Nothing happens when you click? Tick the terms box first, then click Continue with Google again.
+
+Check your daily allowance and Opus access
+
+When the reel was made, APInex advertised a daily allowance that required a one-time $5 top-up. Check Billing for the offer on your account before adding funds.
+
+Open the APInex model catalog and find Claude 4.6 Opus. APInex currently labels it Subscription only. Open Pricing and confirm the plan duration and token allowance before buying.
+
+Tip Check the model's token weight in the catalog. It affects how much of your plan allowance a request uses.
+
+If it fails If Opus returns an access error, check that your subscription is active and the model is included. Step 6 shows how to check the account allowance.
+
+Create and copy your key
+
+Log in at apinex.bond/login, open API Keys (apinex.bond/keys) and create a key. It starts with sk-apx. Copy the full key right away: APInex shows it once and never again.
+
+Keep it somewhere safe, like your password manager or a private note. Anyone with the key can spend your balance.
+
+Tip Logged in, API Keys → Setup shows APInex's own setup steps for Claude Code, Cursor and other tools with your key filled in. Keep the key out of ChatGPT or Claude. Enter it only on your own device when following the setup steps.
+
+If it fails Lost the key? Create a new one in API Keys. If it was exposed, revoke the old one there too.
+
+Use it in Claude Code
+
+Copy the prompt for the path you want and paste it into a new chat in ChatGPT or Claude.
+
+Help me set up Claude Code to use Claude Opus 4.6 through APInex. Ask which operating system and shell I use, and whether Claude Code is installed. If needed, walk me through the official install steps at https://code.claude.com/docs/en/setup.
+
+Use the Anthropic-compatible gateway at https://api.apinex.bond (no /v1 suffix) and the model ID free/claude-opus-4.6. Show me how to set ANTHROPIC_BASE_URL and ANTHROPIC_AUTH_TOKEN for a temporary terminal session and start Claude Code with that model. Use a placeholder for the API key and have me enter it locally. Never ask me to paste it here.
+
+Give me one step at a time. Run a small test with no private data, explain how to fix authentication or subscription errors, and show me how to return to my normal Claude Code setup.
+Copy prompt
+Use it in your own app
+Help me connect my app to Claude Opus 4.6 through APInex. First ask what language and framework I use, and whether I have a server or need a small local example.
+
+Use the OpenAI-compatible API at https://api.apinex.bond/v1 and the model ID free/claude-opus-4.6. Read my API key locally from APINEX_API_KEY. Use a placeholder and never ask me to paste the real key into chat. Keep the key on the server or in my local environment.
+
+Give me the smallest working example for my stack, tell me where to put it, and show me how to test it with a short public message. Explain what to check if the key is rejected, the model requires a subscription, or I hit a rate limit.
+Copy prompt
+Check your allowance before running agents
+Help me check my APInex token allowance before running agents. Ask what operating system and shell I use. Show me where to check my plan in the APInex dashboard, or how to query https://api.apinex.bond/v1/subscription with bearer authentication using a key stored locally in an environment variable. Use a placeholder and never ask for my real key.
+
+Explain how to read tokens_remaining, resets_at_utc and allowed if the response includes them. If I share the response, remind me to remove account details and secrets first. Explain how to tell whether my plan includes free/claude-opus-4.6 and what to do if I get an access or rate-limit error.
+Copy prompt
+
+APInex is a third-party service that resells model access. It is not Anthropic. Read Is this Anthropic? before you paste anything private into it.
+
+Questions
+Is it really free?
+
+APInex lists a $0 per-token rate for this model and requires an active subscription to access it. Check the model catalog before signing up.
+
+What is a token?
+
+A token is a small piece of text, on average about three quarters of an English word. Both what you send and what the model writes back count. A chat message is a few hundred to a few thousand tokens. Claude Code reads your files as it works, so longer coding sessions may consume more of your allowance.
+
+Is this Anthropic?
+
+No. APInex is a third-party service that resells access to models from several companies. It is not affiliated with Anthropic, and Anthropic says it does not endorse, maintain or audit third-party gateways like this one. You cannot check which model actually answers or what happens to your prompts on the way. So keep private data, client data, passwords, keys and code you are not allowed to share off it. Use it for side projects, learning and experiments.
+
+What if it stops working?
+
+Free offers like this can change or end any day. Check apinex.bond/status first. The reliable fallback is the official Claude API at platform.claude.com (Claude Opus 4.6 costs $5 input and $25 output per 1M tokens there), or simply your own Claude plan: follow the reset steps from the Claude Code prompt to return to your normal login.
+
+What are the limits?
+
+The token allowance and request limit depend on your plan. The prompt in step 6 walks you through checking your account allowance.
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

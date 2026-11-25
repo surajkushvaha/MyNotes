@@ -1,0 +1,281 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your own AI video editor in Claude: the free tutorial</title>
+<meta name="description" content="Four steps, three prompts. Claude Code installs five free tools, learns your style from reels you like and makes a first cut of your video with captions and music.">
+<meta name="theme-color" content="#08080A">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://learn.skaleout.com/setup/">
+<meta property="og:title" content="Your own AI video editor in Claude">
+<meta property="og:description" content="The three prompts behind the reel: set up five free tools, learn your style, get a first cut with captions and music.">
+<meta property="og:image" content="https://learn.skaleout.com/setup/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The headline Your own AI video editor in Claude next to a frame from the reel">
+<meta property="og:site_name" content="Skale Out">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/setup/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/InterTight-subset.woff" as="font" type="font/woff" crossorigin="">
+<link rel="stylesheet" href="/setup/style.css">
+<script src="/setup/app.js" defer=""></script>
+<link rel="stylesheet" href="/newsletter.css">
+<script defer="" src="/newsletter.js"></script>
+<script defer="" src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<symbol id="m-claude" viewBox="0 0 24 24"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"></path></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 2.75h8l4.25 4.25v14.25H6z M14 2.75V7h4.25"></path></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"></rect><path d="M15.5 8.5V5.5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"></path></g></symbol>
+<symbol id="i-folder" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 6.5a1.5 1.5 0 0 1 1.5-1.5h4.6l2 2.2h8.4A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"></path></symbol>
+</svg>
+
+<a class="skip" href="#steps">Skip to the steps</a>
+
+<header class="hero">
+  <p class="kicker">free tutorial · 4 steps, 3 prompts</p>
+  <h1 class="title"><span class="g">Your own</span> <span class="g g-accent">AI video editor</span> <span class="g">in Claude</span></h1>
+  <p class="subtitle">With <span class="tool"><svg class="mark" aria-hidden="true" focusable="false"><use href="#m-claude"></use></svg>Claude Code</span> in the desktop app</p>
+  <p class="lede">You need five free tools: Remotion, HyperFrames, FFmpeg, Whisper and yt-dlp. You don't install them yourself: one prompt installs them. The next prompt learns your style from reels you like, the last one makes a first cut of your video with captions and music.</p>
+  <a class="btn btn-primary" href="#prompts">Get the prompts</a>
+</header>
+
+<main>
+  <section class="prompts" id="prompts" aria-labelledby="prompts-h" tabindex="-1">
+    <h2 id="prompts-h">The prompts</h2>
+    <p class="section-lede">Three prompts for Claude Code, used in order in the steps below. Tap Copy, paste it into Claude, send. The prompt boxes scroll, and Copy always takes the whole prompt.</p>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+    <div class="prompt-block">
+      <h3>Prompt 1: Claude installs the five tools</h3>
+      <div class="card">
+        <div class="card-head"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"></use></svg><a class="file" href="/setup/prompts/prompt-1.txt" download="">prompt-1.txt</a><span class="meta"></span><button type="button" class="copy" data-copy="p1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></div>
+<pre class="prompt-text" id="p1" tabindex="0" aria-label="Prompt 1, full text">Set up this folder as my video editing workspace. This chat is open on my folder "my-edits". It should hold three folders: "raw clips", "references" and "renders". Create any of the three that are missing. Do not change or delete any other file on my computer.
+
+Install these tools and check that each one works:
+1. Node.js 22 or newer (HyperFrames needs 22 or newer, Remotion runs on it too)
+2. Python 3
+3. FFmpeg, including ffprobe
+4. Whisper, OpenAI's free speech to text (the openai-whisper package). If it will not install, use whisper.cpp instead.
+5. yt-dlp, the free video downloader
+6. Remotion and HyperFrames, the two free tools that turn code into video, set up in this folder
+
+How to work:
+- First find out my operating system and its version, and which of these tools are already installed and which version. Show me a short table: tool, found or missing, version. Then list the exact commands you will run for the missing ones and wait for my OK.
+- Never type or ask for my password. If a step needs an administrator password, stop, give me the one command to paste into my own Terminal window (Mac) or PowerShell window (Windows), say what it will ask me, and wait until I write "done".
+- Install one tool at a time and check it right after by printing its version. If a step fails, read the error and try the fix the tool's official docs give. If it still fails, tell me in plain words what failed and what I can do, then go on with the next tool.
+
+On a Mac:
+- Use Homebrew. If the command "brew" is not found, ask me to install Homebrew myself by pasting this into the Terminal app (it asks for my Mac password once):
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  When it finishes it prints "Next steps" with one or two commands that add brew to the PATH. Tell me to run those too, then continue.
+- Install only what is missing with: brew install node python ffmpeg yt-dlp openai-whisper
+- If openai-whisper fails, run: brew install whisper.cpp
+- Remotion needs macOS 15 (Sequoia) or newer. On an older macOS skip Remotion, tell me, and use HyperFrames alone.
+
+On Windows:
+- Use winget (it comes with Windows 10 and 11 as "App Installer"). If winget is missing, tell me to install "App Installer" from the Microsoft Store and wait.
+- Install what is missing, one at a time, with: winget install --id &lt;id&gt; -e
+  Node.js: OpenJS.NodeJS.LTS. Python: Python.Python.3.12. FFmpeg: Gyan.FFmpeg. yt-dlp: yt-dlp.yt-dlp.
+  Windows may show a "Do you want to allow this app to make changes" box. I click Yes myself, so tell me when to expect it.
+- Then Whisper: py -3.12 -m pip install -U openai-whisper
+  If the "whisper" command is not found afterwards, use "py -3.12 -m whisper" instead.
+- A tool installed a moment ago is often "not found" until the app restarts. If that happens, tell me to quit and reopen the Claude app, start a new local chat on this folder and paste this prompt again. It skips what is already installed.
+
+Remotion and HyperFrames (Mac and Windows, run inside this folder):
+- HyperFrames: run "npx hyperframes skills update" (this adds HyperFrames' own instructions for Claude), then "npx hyperframes doctor". Doctor checks Node.js, FFmpeg and Chrome. Fix every line it marks as failing with the hint it prints.
+- Remotion: run "npx create-video@latest --yes --blank remotion-starter". This makes a folder "remotion-starter" with an empty Remotion project. Then, inside remotion-starter, run "npx remotion skills add".
+- If npx asks "Ok to proceed? (y)", answer y.
+
+Last check:
+- Print a final checklist with one line per tool: name, version, OK or FAILED. For every FAILED line add one sentence on how I can fix it.
+- Test Whisper without a real video: run its help command (whisper --help, or whisper-cli --help for whisper.cpp). Tell me that the first real transcription downloads a speech model once, so it takes longer.
+- Then tell me: "Setup done. Start a new local chat on this folder and paste prompt 2." A new chat loads the instructions HyperFrames and Remotion just added.
+</pre>
+      </div>
+      <button type="button" class="btn btn-primary btn-wide" data-copy="p1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy prompt 1</span></button>
+    </div>
+    <div class="prompt-block">
+      <h3>Prompt 2: Claude learns your style</h3>
+      <div class="card">
+        <div class="card-head"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"></use></svg><a class="file" href="/setup/prompts/prompt-2.txt" download="">prompt-2.txt</a><span class="meta"></span><button type="button" class="copy" data-copy="p2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></div>
+<pre class="prompt-text" id="p2" tabindex="0" aria-label="Prompt 2, full text">Learn my video style from the reels I like. This chat is open on my folder "my-edits", which holds the folders "raw clips", "references" and "renders". The tools are installed: yt-dlp, FFmpeg (with ffprobe) and Whisper (the "whisper" command, or whisper.cpp through "npx hyperframes transcribe"). If one of them is missing, tell me which one and stop.
+
+The links to 3 to 5 reels I like are at the end of this message.
+
+For each link:
+1. Download it with yt-dlp into "references", named by the video id:
+   yt-dlp -o "references/%(id)s.%(ext)s" "&lt;link&gt;"
+   If a download fails because the site wants me logged in, tell me. You may retry with --cookies-from-browser &lt;my browser&gt; only after I say yes and name my browser. For YouTube links, if yt-dlp warns about a missing JavaScript runtime, retry with --js-runtimes node.
+2. Measure it with ffprobe and FFmpeg:
+   - length in seconds, width, height, frame rate
+   - hard cuts: run FFmpeg's scene detection (select='gt(scene,0.3)' with showinfo) and count the cuts. Write cuts per second and the average shot length in seconds.
+   - loudness: run FFmpeg's ebur128 filter and write the integrated loudness in LUFS.
+3. Take frames: one frame every second as JPEG into "references/frames/&lt;video id&gt;/". Look at the frames yourself.
+4. Transcribe it: whisper "&lt;file&gt;" --model small --word_timestamps True --output_format json --output_dir references/transcripts
+   (or npx hyperframes transcribe "&lt;file&gt;" if only whisper.cpp is installed). The first run downloads the speech model once.
+
+Then write "references/STYLE.md" in plain English with these sections. Give a measured number wherever you have one, and mark guesses as guesses:
+- Cut pace: cuts per second and average shot length for each reel, then the average.
+- Captions: font family (your best guess, plus a free look-alike from Google Fonts), size as a share of the frame height, position on screen, text and highlight colours, outline or box, words per caption, upper or lower case, how words appear (pop, fade, word by word).
+- Colours: the 4 to 6 main colours as hex codes, and the overall look (warm, cool, contrasty, muted).
+- Motion graphics: what moves on screen besides the person (zooms, punch-ins, arrows, emoji, b-roll, screen recordings, transitions) and how often.
+- Music and sound: integrated loudness, and what you can tell from the frames and the transcript. You cannot hear the audio, so say so, and leave a line for me to fill in the music feel.
+- Hook: the first 3 seconds of each reel (the words said, the text on screen, what the first frame shows) and the pattern they share.
+- A short recipe: 5 to 8 bullet rules for my edits that follow from the above.
+
+Put this line at the top of STYLE.md, word for word:
+"Learn from them, don't copy them: no copied footage, text or logos in my edits."
+
+At the end, show me the recipe and tell me: "Your style is saved in references/STYLE.md. Put your video in raw clips (or write an animation idea) and paste prompt 3." Also remind me that downloading other people's reels is only for my private study.
+
+<mark class="slot">My reels:
+1.
+2.
+3.
+4.
+5.
+</mark></pre>
+      </div>
+      <button type="button" class="btn btn-primary btn-wide" data-copy="p2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy prompt 2</span></button>
+    </div>
+    <div class="prompt-block">
+      <h3>Prompt 3: your first cut</h3>
+      <div class="card">
+        <div class="card-head"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"></use></svg><a class="file" href="/setup/prompts/prompt-3.txt" download="">prompt-3.txt</a><span class="meta"></span><button type="button" class="copy" data-copy="p3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></div>
+<pre class="prompt-text" id="p3" tabindex="0" aria-label="Prompt 3, full text">Make a first cut of my video. This chat is open on my folder "my-edits", which holds "raw clips" (my footage), "references" (with STYLE.md, my style notes) and "renders" (where finished videos go). The tools are installed: FFmpeg (with ffprobe), Whisper (the "whisper" command, or whisper.cpp through "npx hyperframes transcribe"), HyperFrames and Remotion (both run with npx). Read references/STYLE.md first and follow it. If STYLE.md is missing, tell me to run prompt 2 first and stop.
+
+What to edit:
+- If I wrote an animation idea at the very end of this message, build that animation (see "If I described an animation" below).
+- Otherwise take the newest video file in "raw clips" (the one changed most recently). If the folder is empty, tell me and stop. Never change or delete my original files: work on copies.
+
+Steps for my video:
+1. Check it with ffprobe: length, size, frame rate, rotation, audio.
+2. Transcribe it with word timings: whisper "&lt;file&gt;" --model small --word_timestamps True --output_format json --output_dir renders/&lt;name&gt;-work (or npx hyperframes transcribe "&lt;file&gt;" if only whisper.cpp is installed). &lt;name&gt; is the file name without its extension.
+3. Find what to cut: silences longer than about 0.4 seconds (FFmpeg silencedetect, about -35 dB) and false starts, where I start a sentence and then say it again. Keep the last, cleanest take of each line. Keep about 0.1 seconds of air around every cut so words are not clipped.
+4. Write the plan to renders/&lt;name&gt;-work/cuts.md: each kept part with its start and end time and its words, and each removed part with the reason.
+5. Cut the video with FFmpeg into renders/&lt;name&gt;-work/cut.mp4, then transcribe cut.mp4 again so the caption timings match the new edit.
+6. Build the edit as a 1080x1920 (9:16) video at 30 fps with HyperFrames:
+   npx hyperframes init renders/&lt;name&gt;-project --video renders/&lt;name&gt;-work/cut.mp4 --resolution portrait --non-interactive --skip-transcribe
+   Read the AGENTS.md that init writes into the project, it lists the commands. If HyperFrames does not work, use Remotion instead: copy the "remotion-starter" folder to renders/&lt;name&gt;-project (if it is missing, run npx create-video@latest --yes --blank renders/&lt;name&gt;-project) and build the same edit there.
+   - The video fills the frame. If it is not 9:16, crop it to fill (never squash it).
+   - Word timed captions in the STYLE.md look: font, size, position, colours, words per caption, the way words appear. Use the timings from step 5. Keep captions inside the middle of the frame, away from the top and bottom edges where Instagram puts its buttons.
+   - Motion from STYLE.md (punch-ins, zooms) only where it helps, and at the cut pace STYLE.md measured.
+   - Music only from a file I put in "references/music" (mp3, wav or m4a). If there is one, play it under my voice about 18 dB quieter, fade it in and out, and end it with the video. If that folder is empty or missing, add no music and tell me so.
+7. Render it to renders/&lt;name&gt;-first-cut.mp4. Check the file with ffprobe (1080x1920, 30 fps, sound) and look at 3 frames from it (start, middle, end) to make sure the captions are readable and nothing is cut off. Fix what is wrong and render again.
+
+If I described an animation:
+- Build it with HyperFrames as a 1080x1920 video at 30 fps in the STYLE.md colours and fonts. Length: what I wrote, or 10 seconds. Text on screen only if I asked for it. Music only from references/music, as above.
+- Render it to renders/animation-first-cut.mp4 and check it the same way.
+
+When the first cut is done:
+- Tell me the file path, its length, and in one line each: what you cut, how the captions look, whether there is music.
+- Then tell me: "Want changes? Tell me in plain words, for example: the hook needs more punch, make the captions bigger, cut the part about pricing, music quieter." For every change, edit the same project and render a new numbered file (first-cut-2.mp4, first-cut-3.mp4, ...). Never overwrite an earlier render.
+
+<mark class="slot">My animation idea (leave empty to edit my newest video):
+</mark></pre>
+      </div>
+      <button type="button" class="btn btn-primary btn-wide" data-copy="p3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy prompt 3</span></button>
+    </div>
+  </section>
+
+<aside class="nl nl-inline" aria-label="Newsletter signup">
+  <div class="nl-strip">
+    <p class="nl-strip-title">Get 30 bonus animation styles and new freebies when I create them!</p>
+    <form class="nl-form" data-spot="mid" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Sign me up</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</aside>
+
+
+  <section class="steps" id="steps" aria-labelledby="steps-h" tabindex="-1">
+    <h2 id="steps-h">Step by step</h2>
+    <p class="section-lede">Four steps. Steps 2, 3 and 4 each send one of the prompts above, in order.</p>
+    <ol class="step-list">
+      <li id="step-1">
+        <h3>Get the desktop app, open Claude Code, make the folder</h3>
+        <figure class="still"><img src="/setup/media/step1-folder.jpg" width="540" height="960" loading="lazy" alt="Frame from the reel: a folder my-edits holding the folders raw clips, references and renders"><figcaption>From the reel</figcaption></figure>
+        <p>Download the Claude desktop app for Mac or Windows from <a href="https://claude.com/download" rel="noopener">claude.com/download</a>, open it and sign in. Click the <strong>Code</strong> tab at the top of the sidebar.</p>
+        <p>Make a folder named <code>my-edits</code> in Finder or File Explorer, with three folders inside:</p>
+        <div class="card tree" aria-label="Folder layout">
+          <div class="card-head"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-folder"></use></svg><span class="file">my-edits</span><span class="meta">3 folders</span></div>
+<pre class="tree-text">my-edits/
+  raw clips/     your own footage
+  references/    reels you like
+  renders/       finished videos</pre>
+        </div>
+        <p>Back in the Code tab, look at the row under the prompt box. Click the first control (the environment selector) and pick the top entry under <strong>Local</strong>. Click the project folder control next to it, choose <strong>Open folder…</strong> and pick <code>my-edits</code>. That is your local chat on the folder.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Clicking Code shows a prompt to upgrade? Claude Code needs a paid Claude plan (see the questions below). Keep the permission mode on <strong>Manual</strong> at first: Claude then asks before it runs a command or changes a file.</p>
+      </li>
+      <li id="step-2">
+        <h3>Send prompt 1: Claude installs the five tools</h3>
+        <figure class="still"><img src="/setup/media/step2-tools.jpg" width="540" height="960" loading="lazy" alt="Frame from the reel: five tool icons, Remotion, HyperFrames, FFmpeg, Whisper and yt-dlp"><figcaption>From the reel</figcaption></figure>
+        <p>Copy prompt 1 from the box above, paste it into the chat and send it. Claude checks your computer, shows what is missing and waits for your OK before it installs anything. At the end it prints a checklist with every tool's version. Then start a new local chat on the same folder for step 3.</p>
+        <p class="tip"><span class="tip-k">Tip</span> On a Mac without Homebrew, Claude gives you one command to paste into the Terminal app. Your Mac password goes there, never into the chat. Something failed? Type "fix the error", or paste prompt 1 again: it skips what is already installed.</p>
+      </li>
+      <li id="step-3">
+        <h3>Send prompt 2: Claude learns your style</h3>
+        <figure class="still"><img src="/setup/media/step3-taste.jpg" width="540" height="960" loading="lazy" alt="Frame from the reel: a style card with palette, cut pace, captions, font and music"><figcaption>From the reel</figcaption></figure>
+        <p>Choose three to five reels you like, the kind of video you want to make. Copy prompt 2 from the box above, paste it, put the reel links under "My reels" at the end and send. Claude downloads them into <code>references</code>, measures the cut pace, captions, colours, loudness and hooks, and saves it all in <code>references/STYLE.md</code>.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Instagram sometimes refuses downloads without a login. Claude then asks before it uses your browser's login. Learn from these reels, don't copy them: they are for your private study.</p>
+      </li>
+      <li id="step-4">
+        <h3>Send prompt 3: your first cut</h3>
+        <figure class="still"><img src="/setup/media/step4-first-cut.jpg" width="540" height="960" loading="lazy" alt="Frame from the reel: a timeline with cut pauses, captions and music, labelled first cut"><figcaption>From the reel</figcaption></figure>
+        <p>Film your video and put it in <code>raw clips</code>. Copy prompt 3 from the box above, paste it and send. Claude takes your newest video, removes the pauses and false starts, adds word timed captions in your style and renders a 1080x1920 first cut into <code>renders</code>.</p>
+        <p>Rather make an animation? Write your idea at the end of prompt 3, under "My animation idea", and Claude builds that instead.</p>
+        <p>Want changes? Just tell it in plain words in the same chat, for example "the hook needs more punch" or "make the captions bigger". Every change becomes a new numbered file, so nothing gets overwritten.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Music only comes from you: make a folder <code>music</code> inside <code>references</code> and put one music file in it. No file, no music.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details open="">
+      <summary>Does it cost money?</summary>
+      <p>The five tools and the three prompts are free. Claude Code needs a paid Claude plan: Pro, Max, Ultra, Team or Enterprise. The Free plan does not include it. Prices are on <a href="https://claude.com/pricing" rel="noopener">claude.com/pricing</a>. Remotion is free for individuals and for companies of up to three people; bigger companies need a company license (<a href="https://www.remotion.dev/license" rel="noopener">remotion.dev/license</a>).</p>
+    </details>
+    <details open="">
+      <summary>Does it work on Mac and Windows?</summary>
+      <p>Yes. The desktop app runs on both, and prompt 1 has the install steps for each: Homebrew on a Mac, winget on Windows. Claude Code needs macOS 13 or newer, or Windows 10 (version 1809) or newer. Remotion needs macOS 15 or newer on a Mac; on an older Mac prompt 1 skips Remotion and the edits run on HyperFrames.</p>
+    </details>
+    <details open="">
+      <summary>How long does the setup take?</summary>
+      <p>We have not timed it on a fresh computer, so no promise here. It depends on your internet speed and on what is already installed. The first transcription also downloads Whisper's speech model once, so it takes longer than the ones after it.</p>
+    </details>
+    <details open="">
+      <summary>Am I allowed to download other people's reels?</summary>
+      <p>Only for your own private study, and that is your responsibility: check the platform's terms. Claude learns the style from them; it does not put their footage, text or logos into your edits. What you post should be your own footage.</p>
+    </details>
+    <details open="">
+      <summary>Why does my result look different?</summary>
+      <p>Claude writes every edit fresh, from your footage and the reels you picked, so no two first cuts look the same. Tell it what to change in plain words, or pick reference reels that are closer to the look you want and run prompt 2 again.</p>
+    </details>
+  </section>
+<section class="nl" id="newsletter" aria-labelledby="nl-title">
+  <div class="nl-card">
+    <h2 id="nl-title">Get the next one by email</h2>
+    <p class="section-lede">Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.</p>
+    <form class="nl-form" data-spot="end" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Send me the next one</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Made by <a href="https://www.instagram.com/skaleout/" rel="noopener">Jan</a>, <a href="https://skaleout.com" rel="noopener">Skale Out</a> · <a href="/newsletter">Newsletter</a></p>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,140 @@
+[
+ {
+  "url": "https://learn.skaleout.com/",
+  "slug": "index",
+  "status": 200,
+  "title": "Free tutorials by Jan, Skale Out"
+ },
+ {
+  "url": "https://learn.skaleout.com/video",
+  "slug": "video",
+  "status": 200,
+  "title": "Viral Videos with one prompt in Claude and GPT: the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/video/fly",
+  "slug": "video_fly",
+  "status": 200,
+  "title": "Viral Videos with one prompt in Claude and GPT: what if you could fly"
+ },
+ {
+  "url": "https://learn.skaleout.com/video/car",
+  "slug": "video_car",
+  "status": 200,
+  "title": "Viral Videos with one prompt in Claude and GPT: drift on a cliff road"
+ },
+ {
+  "url": "https://learn.skaleout.com/video/dragon",
+  "slug": "video_dragon",
+  "status": 200,
+  "title": "Viral Videos: a baby dragon in ten styles with one prompt in Claude and GPT, the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/styles",
+  "slug": "styles",
+  "status": 200,
+  "title": "One Ball, Ten Styles with one prompt in Claude and GPT: the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/setup",
+  "slug": "setup",
+  "status": 200,
+  "title": "Your own AI video editor in Claude: the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/animation-styles",
+  "slug": "animation-styles",
+  "status": 200,
+  "title": "10 Animation Styles with Claude and ChatGPT: the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/human",
+  "slug": "human",
+  "status": 200,
+  "title": "Make Claude write like a human: the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/ship",
+  "slug": "ship",
+  "status": 200,
+  "title": "Put any site online in seconds: the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/study",
+  "slug": "study",
+  "status": 200,
+  "title": "Turn Any Topic Into 10 Study Graphics: the free tutorial"
+ },
+ {
+  "url": "https://learn.skaleout.com/draw",
+  "slug": "draw",
+  "status": 200,
+  "title": "Claude can be your animation studio: the free skill and guide"
+ },
+ {
+  "url": "https://learn.skaleout.com/tokens",
+  "slug": "tokens",
+  "status": 200,
+  "title": "Set up Claude Opus 4.6 with APInex | Skale Out"
+ },
+ {
+  "url": "https://learn.skaleout.com/poster",
+  "slug": "poster",
+  "status": 200,
+  "title": "Turn a product photo into a studio poster: the free prompt"
+ },
+ {
+  "url": "https://learn.skaleout.com/tools",
+  "slug": "tools",
+  "status": 200,
+  "title": "3 free tools that make your Claude limit last longer"
+ },
+ {
+  "url": "https://learn.skaleout.com/skills",
+  "slug": "skills",
+  "status": 200,
+  "title": "6 animation skills for Claude: free download and guide"
+ },
+ {
+  "url": "https://learn.skaleout.com/newsletter",
+  "slug": "newsletter",
+  "status": 200,
+  "title": "Free AI tools and skills, straight to your inbox: the Skale Out newsletter"
+ },
+ {
+  "url": "https://learn.skaleout.com/setup/prompts/prompt-1.txt",
+  "slug": "setup_prompts_prompt-1.txt",
+  "status": 200,
+  "title": ""
+ },
+ {
+  "url": "https://learn.skaleout.com/setup/prompts/prompt-2.txt",
+  "slug": "setup_prompts_prompt-2.txt",
+  "status": 200,
+  "title": ""
+ },
+ {
+  "url": "https://learn.skaleout.com/setup/prompts/prompt-3.txt",
+  "slug": "setup_prompts_prompt-3.txt",
+  "status": 200,
+  "title": ""
+ },
+ {
+  "url": "https://learn.skaleout.com/ship/prompts/vercel.txt",
+  "slug": "ship_prompts_vercel.txt",
+  "status": 200,
+  "title": ""
+ },
+ {
+  "url": "https://learn.skaleout.com/ship/prompts/netlify.txt",
+  "slug": "ship_prompts_netlify.txt",
+  "status": 200,
+  "title": ""
+ },
+ {
+  "url": "https://learn.skaleout.com/tools/prompts/install-3-tools.txt",
+  "slug": "tools_prompts_install-3-tools.txt",
+  "status": 200,
+  "title": ""
+ }
+]

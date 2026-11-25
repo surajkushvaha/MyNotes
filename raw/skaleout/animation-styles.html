@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>10 Animation Styles with Claude and ChatGPT: the free tutorial</title>
+<meta name="description" content="How the ten animated paintings in the reel were made: the prompts you can copy for each style, watercolour to Ghibli, built with Claude or ChatGPT. Nothing to install.">
+<meta name="theme-color" content="#08080A">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://learn.skaleout.com/animation-styles">
+<meta property="og:title" content="10 Animation Styles with Claude and ChatGPT">
+<meta property="og:description" content="The free tutorial behind the reel: ten animated paintings drawn in code, and the three prompts behind each one.">
+<meta property="og:image" content="https://learn.skaleout.com/animation-styles/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Five of the animated paintings: watercolour koi, a mosaic turtle, ink cranes, an oil painted whale and a night meadow">
+<meta property="og:site_name" content="Skale Out">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/animation-styles/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/InterTight-subset.woff" as="font" type="font/woff" crossorigin="">
+<link rel="stylesheet" href="/animation-styles/style.css">
+<script src="/animation-styles/app.js" defer=""></script>
+<link rel="stylesheet" href="/newsletter.css">
+<script defer="" src="/newsletter.js"></script>
+<script defer="" src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<symbol id="m-claude" viewBox="0 0 24 24"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"></path></symbol>
+<symbol id="m-gpt" viewBox="1.68 1.75 16.65 16.5"><path fill="#FFFFFF" d="M11.248 18.25q-.825 0-1.568-.314a4.3 4.3 0 0 1-1.32-.874 4 4 0 0 1-1.304.214 4 4 0 0 1-2.046-.544 4.27 4.27 0 0 1-1.518-1.485 4 4 0 0 1-.56-2.095q0-.48.131-1.04A4.4 4.4 0 0 1 2.04 10.71a4.07 4.07 0 0 1 .017-3.4 4.2 4.2 0 0 1 1.056-1.418 3.8 3.8 0 0 1 1.6-.842 3.9 3.9 0 0 1 .76-1.683q.593-.759 1.451-1.188a4.04 4.04 0 0 1 1.832-.429q.825 0 1.567.313.742.314 1.32.875a4 4 0 0 1 1.304-.215q1.106 0 2.046.545a4.14 4.14 0 0 1 1.501 1.485q.578.941.578 2.095 0 .48-.132 1.04.66.61 1.023 1.419.363.792.363 1.666 0 .892-.38 1.717a4.3 4.3 0 0 1-1.072 1.435 3.8 3.8 0 0 1-1.584.825 3.8 3.8 0 0 1-.775 1.683 4.06 4.06 0 0 1-1.436 1.188 4.04 4.04 0 0 1-1.832.429m-4.076-2.062q.825 0 1.435-.347l3.103-1.782a.36.36 0 0 0 .164-.313v-1.42L7.881 14.62a.67.67 0 0 1-.726 0l-3.118-1.798a.5.5 0 0 1-.017.115v.198q0 .841.396 1.551.413.693 1.139 1.089a3.2 3.2 0 0 0 1.617.412m.165-2.69a.4.4 0 0 0 .181.05q.083 0 .165-.05l1.238-.71-3.977-2.31a.7.7 0 0 1-.363-.643v-3.58q-.825.362-1.32 1.122a2.9 2.9 0 0 0-.495 1.65q0 .809.413 1.55.412.743 1.072 1.123zm3.91 3.663q.875 0 1.585-.396a2.96 2.96 0 0 0 1.534-2.64v-3.564a.32.32 0 0 0-.165-.297l-1.254-.726v4.604a.7.7 0 0 1-.363.643l-3.119 1.799a3 3 0 0 0 1.783.577m.627-6.039V8.878L10.01 7.822 8.129 8.878v2.244l1.881 1.056zM7.057 5.859a.7.7 0 0 1 .363-.644l3.119-1.798a3 3 0 0 0-1.782-.578q-.874 0-1.584.396A2.96 2.96 0 0 0 6.05 4.324a3.07 3.07 0 0 0-.396 1.551v3.547q0 .199.165.314l1.237.726zm8.383 7.887q.825-.364 1.303-1.123.495-.758.495-1.65a3.15 3.15 0 0 0-.412-1.55q-.413-.743-1.073-1.123l-3.086-1.782q-.099-.065-.181-.049a.3.3 0 0 0-.165.05l-1.238.692 3.993 2.327a.6.6 0 0 1 .264.264.64.64 0 0 1 .1.363zm-3.317-8.382a.63.63 0 0 1 .726 0l3.135 1.831v-.297q0-.792-.396-1.501a2.86 2.86 0 0 0-1.105-1.155q-.71-.43-1.65-.43-.825 0-1.436.347L8.294 5.941a.36.36 0 0 0-.165.314v1.418z"></path></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 2.75h8l4.25 4.25v14.25H6z M14 2.75V7h4.25"></path></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"></rect><path d="M15.5 8.5V5.5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"></path></g></symbol>
+</svg>
+
+<a class="skip" href="#prompts">Skip to the prompts</a>
+
+<header class="hero">
+  <p class="kicker">free tutorial · 10 animation styles</p>
+  <h1 class="title"><span class="g g-accent">10</span> <span class="g">Animation</span> <span class="g">Styles</span></h1>
+  <p class="subtitle">With <span class="tool"><svg class="mark" aria-hidden="true" focusable="false"><use href="#m-claude"></use></svg>Claude</span> and <span class="tool"><svg class="mark" aria-hidden="true" focusable="false"><use href="#m-gpt"></use></svg>ChatGPT</span></p>
+  <p class="lede">Every clip is a painting drawn in code and brought to life: no video model, no After Effects. Here are the three prompts behind each one, ready to copy. Nothing to install.</p>
+  <a class="btn btn-primary" href="#prompts">Get the prompts</a>
+</header>
+
+<main>
+  <section class="clips" aria-labelledby="clips-h">
+    <h2 id="clips-h">The ten styles</h2>
+    <p class="section-lede">How these were made: each clip started as one painting, then it was animated, then polished over a few rounds of feedback in the same chat. That took 30 to 90 minutes per clip. The prompts below are those three rounds. Your first version comes back in minutes and will look simpler; each fix round brings it closer.</p>
+    <ul class="grid" id="clip-grid">
+      <li><figure><div class="frame"><video src="/animation-styles/media/01-watercolour.mp4" data-poster="/animation-styles/media/01-watercolour.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Watercolour koi gliding through a pond" poster="/animation-styles/media/01-watercolour.jpg"></video></div><figcaption><span class="n">01</span> Watercolour</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/02-mosaic.mp4" data-poster="/animation-styles/media/02-mosaic.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Roman mosaic sea turtle swimming over the tiles" poster="/animation-styles/media/02-mosaic.jpg"></video></div><figcaption><span class="n">02</span> Roman Mosaic</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/03-sumie.mp4" data-poster="/animation-styles/media/03-sumie.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Sumi-e ink crane flying through misty mountains" poster="/animation-styles/media/03-sumie.jpg"></video></div><figcaption><span class="n">03</span> Sumi-e Ink</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/04-impasto.mp4" data-poster="/animation-styles/media/04-impasto.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Impasto oil painting of a whale breaching" poster="/animation-styles/media/04-impasto.jpg"></video></div><figcaption><span class="n">04</span> Impasto Oil</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/05-nocturne.mp4" data-poster="/animation-styles/media/05-nocturne.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Gouache night meadow with a deer and fireflies" poster="/animation-styles/media/05-nocturne.jpg"></video></div><figcaption><span class="n">05</span> Nocturne Gouache</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/06-botanical.mp4" data-poster="/animation-styles/media/06-botanical.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Botanical plate with a blue butterfly" poster="/animation-styles/media/06-botanical.jpg"></video></div><figcaption><span class="n">06</span> Botanical Plate</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/07-papercut.mp4" data-poster="/animation-styles/media/07-papercut.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Paper cut jellyfish rising through paper sea layers" poster="/animation-styles/media/07-papercut.jpg"></video></div><figcaption><span class="n">07</span> Paper Cut</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/08-nouveau.mp4" data-poster="/animation-styles/media/08-nouveau.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Art Nouveau hummingbird at a red flower" poster="/animation-styles/media/08-nouveau.jpg"></video></div><figcaption><span class="n">08</span> Art Nouveau</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/09-goldenhour.mp4" data-poster="/animation-styles/media/09-goldenhour.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Golden hour swallow skimming a wheat field" poster="/animation-styles/media/09-goldenhour.jpg"></video></div><figcaption><span class="n">09</span> Golden Hour</figcaption></figure></li>
+      <li><figure><div class="frame"><video src="/animation-styles/media/10-ghibli.mp4" data-poster="/animation-styles/media/10-ghibli.jpg" muted="" loop="" playsinline="" preload="none" aria-label="Two kids running through a sunny anime meadow" poster="/animation-styles/media/10-ghibli.jpg"></video></div><figcaption><span class="n">10</span> Ghibli Style</figcaption></figure></li>
+    </ul>
+  </section>
+
+  <section class="prompt" id="prompts" aria-labelledby="prompts-h" tabindex="-1">
+    <h2 id="prompts-h">The prompts</h2>
+    <p class="section-lede">Pick a style: the two prompts below update. Prompt 1 starts a new chat, prompt 2 goes into that same chat.</p>
+
+    <div class="picker" role="group" aria-labelledby="picker-l">
+      <p class="picker-label" id="picker-l">Pick a style</p>
+      <div class="chips" id="chips">
+        <button type="button" class="chip" aria-pressed="true" data-key="watercolour">Watercolour</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="mosaic">Roman Mosaic</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="sumie">Sumi-e Ink</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="impasto">Impasto Oil</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="nocturne">Nocturne Gouache</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="botanical">Botanical Plate</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="papercut">Paper Cut</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="nouveau">Art Nouveau</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="goldenhour">Golden Hour</button>
+        <button type="button" class="chip" aria-pressed="false" data-key="ghibli">Ghibli Style</button>
+        <button type="button" class="chip chip-own" aria-pressed="false" data-own="true">Write your own</button>
+      </div>
+      <div class="own" id="own" hidden="">
+        <label for="own-scene">Your scene</label>
+        <input id="own-scene" type="text" autocomplete="off" maxlength="400" placeholder="e.g. an otter floats on its back in a kelp forest, holding a shell">
+        <label for="own-style">Your style</label>
+        <input id="own-style" type="text" autocomplete="off" maxlength="400" placeholder="e.g. a woodcut print: black carved lines, one red ink, rough paper">
+      </div>
+    </div>
+
+    <div class="round" data-status="">
+      <h3>1. Paint the picture</h3>
+      <p>Start a new chat and send this. You get one still painting back.</p>
+      <div class="card">
+        <div class="card-head">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"></use></svg>
+          <span class="file">prompt-1.txt</span>
+          <span class="meta" data-meta="">style: Watercolour</span>
+          <button type="button" class="copy" data-copy="p1" data-done="Copied. Paste it into a new chat and send."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+        </div>
+<pre class="prompt-text" id="p1">Create one self-contained HTML file that shows a single still painting in a 9:16 frame: a 1080x1920 canvas scaled to fit the window, black outside it. Draw everything in code with the Canvas 2D API: no images, no external files, no libraries. Use a seeded random number generator so the picture looks the same on every load.
+
+Scene: <mark class="slot" id="slot-scene">A koi pond seen from straight above: three koi (red, orange, and white with red patches) glide between green lily pads and one pink lotus over blue-green water.</mark>
+
+Style: <mark class="slot" id="slot-style">Watercolour on cold-press paper: soft washes with blooms and hard dried edges, pigment granulation, a few small splatters, the paper grain showing through. Only a few colours: warm koi against a cool blue-green pond.</mark>
+
+It must look like a real piece made in that medium, not a digital filter: real texture, uneven edges, the marks a hand and a tool would leave. No flat vector shapes and no plain digital gradients.
+
+Draw the main subject, every other creature and each depth layer of the background in its own function, so the picture can be animated later. Keep the main subject in the middle half of the frame with room around it to move. No text on screen. Reply with only the HTML file.</pre>
+      </div>
+      <p class="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="round" data-status="">
+      <h3>2. Bring it to life</h3>
+      <p>When you like the painting, send this in the same chat.</p>
+      <div class="card">
+        <div class="card-head">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"></use></svg>
+          <span class="file">prompt-2.txt</span>
+          <span class="meta" data-meta="">style: Watercolour</span>
+          <button type="button" class="copy" data-copy="p2" data-done="Copied. Paste it into the same chat and send."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+        </div>
+<pre class="prompt-text" id="p2">Now turn this painting into a 6 second animation (180 frames at 30 fps) that starts again when it ends. Keep the look exactly as it is: every colour, texture and shape stays the same, and frame 0 shows the full painting.
+
+What happens: <mark class="slot" id="slot-action">The koi glide along slow curving paths, each at its own pace, their bodies flexing in an S wave from head to tail with the fins trailing behind. The lily pads drift and turn a little, soft ripple rings spread from the pads and from the lead fish, and one sun glint crosses the water.</mark>
+
+Rules:
+1. Everything lives. Every painted element moves all the time: the main subject with purpose, everything else with small idle motion.
+2. How it moves in this medium: <mark class="slot" id="slot-motion">Ripples are soft, broken painted rings that fade as they grow. The paint moves, but the paper grain stays fixed to the frame.</mark>
+3. Every movement has a reason inside the scene: wind, current, light, or the subject passing by.
+4. The subject's own action reads at a glance: big, clear poses (wingbeats, strokes, steps), never a tiny wobble. It travels through its world, and the camera keeps it in the middle half of the frame: a slow push in from the full painting to about 1.3x, a soft follow, and the world sliding past behind it, the near layers faster than the far ones.
+5. Smooth: every position and angle moves on an eased curve, with no jumps.
+
+Base every frame on the elapsed time (frame = seconds x 30), so it plays at the same speed on any computer. Paint the textured layers once into offscreen canvases when the page loads and only move and combine them each frame, so it plays smoothly. Reply with only the full HTML file.</pre>
+      </div>
+      <p class="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="round" data-status="">
+      <h3>3. Polish it</h3>
+      <p>Watch it, then send the fix that fits, one at a time, in the same chat. The clips above took a few of these rounds each.</p>
+      <ul class="fixes">
+        <li><p><span class="when">The subject barely moves</span><span id="f1">The main subject barely moves. Make its own action twice as big and let it travel further through the scene, while the camera keeps it in the middle of the frame.</span></p><button type="button" class="copy" data-copy="f1"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></li>
+        <li><p><span class="when">Parts of the picture stand still</span><span id="f2">Some parts of the picture never move. Give every element a small idle motion that makes sense in the scene, like wind, water or light.</span></p><button type="button" class="copy" data-copy="f2"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></li>
+        <li><p><span class="when">It looks digital</span><span id="f3">It looks like a digital filter, not the real medium. Add more of the medium's texture: uneven edges, visible tool and brush marks, the paper or canvas showing through. Keep the motion as it is.</span></p><button type="button" class="copy" data-copy="f3"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></li>
+        <li><p><span class="when">It stutters or plays slowly</span><span id="f4">It stutters or plays slowly. Paint every textured layer once into an offscreen canvas when the page loads, and each frame only move and combine those canvases. Repaint only what changes shape.</span></p><button type="button" class="copy" data-copy="f4"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></li>
+        <li><p><span class="when">It jumps or snaps</span><span id="f5">Some movements jump or snap. Put every position, angle and brightness on a smooth eased curve, with no sudden switches from one frame to the next.</span></p><button type="button" class="copy" data-copy="f5"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></li>
+        <li><p><span class="when">Black screen or an error</span><span id="f6">The page shows a black screen or an error. Find the error, fix it and send the full HTML file again.</span></p><button type="button" class="copy" data-copy="f6"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button></li>
+      </ul>
+      <p class="status" role="status" aria-live="polite"></p>
+    </div>
+    <p class="status" id="status" role="status" aria-live="polite"></p>
+
+    <div class="note">
+      <p><strong>Want another subject?</strong> Tap "Write your own" and type any scene and any medium. Describe the medium the way the ten styles do: the material, the tools, the texture, the colours.</p>
+    </div>
+  </section>
+
+  <aside class="nl nl-inline" aria-label="Newsletter signup">
+  <div class="nl-strip">
+    <p class="nl-strip-title">Get 30 bonus animation styles and new freebies when I create them!</p>
+    <form class="nl-form" data-spot="mid" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Sign me up</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</aside>
+<section class="steps" aria-labelledby="steps-h">
+    <h2 id="steps-h">Step by step</h2>
+    <ol class="step-list">
+      <li>
+        <h3>Open <span class="tool"><svg class="mark" aria-hidden="true" focusable="false"><use href="#m-claude"></use></svg>Claude</span> or <span class="tool"><svg class="mark" aria-hidden="true" focusable="false"><use href="#m-gpt"></use></svg>ChatGPT</span></h3>
+        <p>Go to claude.ai or chatgpt.com and start a new chat.</p>
+        <p class="tip"><span class="tip-k">Tip</span> A paid plan works best: these answers are long, and a free plan may cut them off.</p>
+      </li>
+      <li>
+        <h3>Send prompt 1</h3>
+        <p>Pick a style above, copy prompt 1, paste it into the chat and send it. You get back one HTML file with the painting.</p>
+        <p class="tip"><span class="tip-k">Tip</span> It can think for several minutes. Let it finish. If it stops halfway, type "continue".</p>
+      </li>
+      <li>
+        <h3>Look at it</h3>
+        <p>In Claude the HTML shows up as an artifact right in the chat. In ChatGPT open it in the canvas preview; if there is none, use the tip below.</p>
+        <p class="tip"><span class="tip-k">Tip</span> No preview? Copy the code into a file named painting.html and open it in your browser. Not happy with the painting? Say what to change before you animate it, for example "make the koi bigger" or "more paper texture".</p>
+      </li>
+      <li>
+        <h3>Send prompt 2, then the fixes</h3>
+        <p>In the same chat send prompt 2. Watch the animation, then send the fix lines under "3. Polish it" that fit, one at a time.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Black screen? Send the last fix line. If a chat gets stuck, start a new one with prompt 1.</p>
+      </li>
+      <li>
+        <h3>Turn it into a video</h3>
+        <p>Open the animation big (the artifact in Claude, or the saved HTML file in your browser), make the window tall (or use your phone) and screen record it: on a Mac press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>5</kbd>, on Windows press <kbd>Win</kbd>+<kbd>Alt</kbd>+<kbd>R</kbd> (Xbox Game Bar) or use the Snipping Tool's record, on iPhone or Android use the built-in screen recorder. Then crop it to 9:16 in the Instagram editor or CapCut.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Reload the page right before you record, so you catch it from the first frame.</p>
+      </li>
+      <li>
+        <h3>Post it</h3>
+        <p>Post one style on its own, or put several in one reel the way Jan did with these ten.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Run the same style twice and keep the better one. Every run is a new painting.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details open="">
+      <summary>Why does it take minutes?</summary>
+      <p>The chat writes a whole painting program from scratch, often hundreds of lines of code, and plans it before it writes. A few minutes per answer is normal. Keep the tab open until it is done.</p>
+    </details>
+    <details open="">
+      <summary>Does it cost money?</summary>
+      <p>The prompts and this tutorial are free. Claude and ChatGPT both have free plans you can try, but they have limits and may stop long answers early, so a paid plan works more reliably. There is nothing else to buy or install.</p>
+    </details>
+    <details open="">
+      <summary>Can I use it commercially?</summary>
+      <p>The animation code the chat writes for you is yours to post, edit and use. Check each tool's terms for the details that apply to your plan.</p>
+    </details>
+    <details open="">
+      <summary>Can I change the subject?</summary>
+      <p>Yes. Tap "Write your own" and type your scene and your style, or keep a style: paste prompt 1, change only the Scene line and keep the Style line.</p>
+    </details>
+    <details open="">
+      <summary>Why does mine look different?</summary>
+      <p>Every run is a new painting, and the clips above went through a few rounds of fixes. Expect your first version to be simpler. Send the fix lines, or say exactly what you see and what you want instead, for example "the whale's fins are too small" or "the mist should drift slower".</p>
+    </details>
+  </section>
+<section class="nl" id="newsletter" aria-labelledby="nl-title">
+  <div class="nl-card">
+    <h2 id="nl-title">Get the next one by email</h2>
+    <p class="section-lede">Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.</p>
+    <form class="nl-form" data-spot="end" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Send me the next one</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Made by <a id="ig-link" href="https://www.instagram.com/" rel="noopener">Jan</a>, <a href="https://skaleout.com" rel="noopener">Skale Out</a> · <a href="/newsletter">Newsletter</a></p>
+</footer>
+
+
+</body></html>

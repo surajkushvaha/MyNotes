@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Set up Claude Opus 4.6 with APInex | Skale Out</title>
+<meta name="description" content="Set up Claude Opus 4.6 through APInex in Claude Code or your own app. APInex lists the model at zero per-token cost with an active subscription.">
+<meta name="theme-color" content="#08080A">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://learn.skaleout.com/tokens">
+<meta property="og:title" content="Set up Claude Opus 4.6 with APInex">
+<meta property="og:description" content="Set up Claude Opus 4.6 through APInex in Claude Code or your own app. APInex lists the model at zero per-token cost with an active subscription.">
+<meta property="og:image" content="https://learn.skaleout.com/tokens/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Claude Opus 4.6 with APInex, a guide for Claude Code and API setup">
+<meta property="og:site_name" content="Skale Out">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/tokens/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/InterTight-subset.woff" as="font" type="font/woff" crossorigin="">
+<link rel="stylesheet" href="/tokens/style.css">
+<script src="/tokens/app.js" defer=""></script>
+<link rel="stylesheet" href="/newsletter.css">
+<script defer="" src="/newsletter.js"></script>
+<script defer="" src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"></rect><path d="M15.5 8.5V5.5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"></path></g></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 3.5v12M6.5 10.5 12 16l5.5-5.5M4.5 20.5h15"></path></symbol>
+</svg>
+
+<a class="skip" href="#guide">Skip to the steps</a>
+
+<header class="hero">
+  <p class="kicker">free setup guide · claude code and api</p>
+  <h1 class="title title-long"><span class="g">Claude Opus 4.6</span> <span class="g g-accent">with APInex</span></h1>
+  <p class="lede">Use the prompts below to set up Claude Code or connect your own app. APInex lists Opus 4.6 at $0 per token with a paid subscription.</p>
+  <a class="btn btn-primary" href="#guide"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-down"></use></svg>Start at step 1</a>
+  <div class="shots">
+    <figure class="shot">
+      <img src="/tokens/media/official-opus-row.png" width="1218" height="309" alt="Anthropic's price list: Claude Opus 4.6, input $5 per million tokens, output $25 per million tokens">
+      <figcaption>Anthropic's official price, platform.claude.com, 18 Nov 2026</figcaption>
+    </figure>
+    <figure class="shot">
+      <img src="/tokens/media/apinex-opus-row.png" width="1200" height="127" alt="APInex pricing row: Claude 4.6 Opus, model id free/claude-opus-4.6, APInex input free, output free, official $5 and $25">
+      <figcaption>APInex per-token pricing, captured 18 Nov 2026. The current catalog lists Opus as subscription only.</figcaption>
+    </figure>
+  </div>
+</header>
+
+<main>
+  <aside class="nl nl-inline" aria-label="Newsletter signup">
+  <div class="nl-strip">
+    <p class="nl-strip-title">Get 30 bonus animation styles and new freebies when I create them!</p>
+    <form class="nl-form" data-spot="mid" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Sign me up</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</aside>
+
+  <section class="steps" id="guide" aria-labelledby="steps-h">
+    <h2 id="steps-h">Step by step</h2>
+    <ol class="step-list">
+      <li>
+        <h3>Sign up with Google</h3>
+        <p>Open <a href="https://apinex.bond/register" rel="noopener">apinex.bond/register</a>. Tick the box <strong>I accept the Privacy Policy and Terms of Use</strong>, then click <strong>Continue with Google</strong> and pick your Google account.</p>
+        <figure class="shot shot-narrow">
+          <img src="/tokens/media/apinex-signup.png" width="639" height="720" loading="lazy" alt="APInex sign up card: Continue with Google, sign in with a personal gmail.com Google account only, and the terms checkbox">
+          <figcaption>The sign up card, 18 Nov 2026</figcaption>
+        </figure>
+        <p class="tip"><span class="tip-k">Tip</span> The card says it takes a personal <strong>@gmail.com</strong> account only, so a work or school Google address will not get in. Use a Gmail account you are fine linking to a third-party service.</p>
+        <p class="fix"><span class="fix-k">If it fails</span> Nothing happens when you click? Tick the terms box first, then click <strong>Continue with Google</strong> again.</p>
+      </li>
+      <li>
+        <h3>Check your daily allowance and Opus access</h3>
+        <p>When the reel was made, APInex advertised a daily allowance that required a <strong>one-time $5 top-up</strong>. Check <a href="https://apinex.bond/billing" rel="noopener">Billing</a> for the offer on your account before adding funds.</p>
+        <p>Open the <a href="https://apinex.bond/models?provider=Free" rel="noopener">APInex model catalog</a> and find <strong>Claude 4.6 Opus</strong>. APInex currently labels it <strong>Subscription only</strong>. Open <a href="https://apinex.bond/pricing" rel="noopener">Pricing</a> and confirm the plan duration and token allowance before buying.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Check the model's token weight in the catalog. It affects how much of your plan allowance a request uses.</p>
+        <p class="fix"><span class="fix-k">If it fails</span> If Opus returns an access error, check that your subscription is active and the model is included. Step 6 shows how to check the account allowance.</p>
+      </li>
+      <li>
+        <h3>Create and copy your key</h3>
+        <p>Log in at <a href="https://apinex.bond/login" rel="noopener">apinex.bond/login</a>, open <strong>API Keys</strong> (<a href="https://apinex.bond/keys" rel="noopener">apinex.bond/keys</a>) and create a key. It starts with <code>sk-apx</code>. Copy the full key right away: APInex shows it once and never again.</p>
+        <p>Keep it somewhere safe, like your password manager or a private note. Anyone with the key can spend your balance.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Logged in, <strong>API Keys → Setup</strong> shows APInex's own setup steps for Claude Code, Cursor and other tools with your key filled in. Keep the key out of ChatGPT or Claude. Enter it only on your own device when following the setup steps.</p>
+        <p class="fix"><span class="fix-k">If it fails</span> Lost the key? Create a new one in API Keys. If it was exposed, revoke the old one there too.</p>
+      </li>
+      <li data-status="">
+        <h3>Use it in Claude Code</h3>
+        <p>Copy the prompt for the path you want and paste it into a new chat in <a href="https://chatgpt.com/" rel="noopener">ChatGPT</a> or <a href="https://claude.ai/" rel="noopener">Claude</a>.</p>
+        <div class="cmd prompt-card"><pre id="prompt-claude-code">Help me set up Claude Code to use Claude Opus 4.6 through APInex. Ask which operating system and shell I use, and whether Claude Code is installed. If needed, walk me through the official install steps at https://code.claude.com/docs/en/setup.
+
+Use the Anthropic-compatible gateway at https://api.apinex.bond (no /v1 suffix) and the model ID free/claude-opus-4.6. Show me how to set ANTHROPIC_BASE_URL and ANTHROPIC_AUTH_TOKEN for a temporary terminal session and start Claude Code with that model. Use a placeholder for the API key and have me enter it locally. Never ask me to paste it here.
+
+Give me one step at a time. Run a small test with no private data, explain how to fix authentication or subscription errors, and show me how to return to my normal Claude Code setup.</pre><button type="button" class="copy" data-copy="prompt-claude-code"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy prompt</span></button></div>
+        <p class="status" role="status" aria-live="polite"></p>
+      </li>
+      <li data-status="">
+        <h3>Use it in your own app</h3>
+        <div class="cmd prompt-card"><pre id="prompt-own-app">Help me connect my app to Claude Opus 4.6 through APInex. First ask what language and framework I use, and whether I have a server or need a small local example.
+
+Use the OpenAI-compatible API at https://api.apinex.bond/v1 and the model ID free/claude-opus-4.6. Read my API key locally from APINEX_API_KEY. Use a placeholder and never ask me to paste the real key into chat. Keep the key on the server or in my local environment.
+
+Give me the smallest working example for my stack, tell me where to put it, and show me how to test it with a short public message. Explain what to check if the key is rejected, the model requires a subscription, or I hit a rate limit.</pre><button type="button" class="copy" data-copy="prompt-own-app"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy prompt</span></button></div>
+        <p class="status" role="status" aria-live="polite"></p>
+      </li>
+      <li data-status="">
+        <h3>Check your allowance before running agents</h3>
+        <div class="cmd prompt-card"><pre id="prompt-allowance">Help me check my APInex token allowance before running agents. Ask what operating system and shell I use. Show me where to check my plan in the APInex dashboard, or how to query https://api.apinex.bond/v1/subscription with bearer authentication using a key stored locally in an environment variable. Use a placeholder and never ask for my real key.
+
+Explain how to read tokens_remaining, resets_at_utc and allowed if the response includes them. If I share the response, remind me to remove account details and secrets first. Explain how to tell whether my plan includes free/claude-opus-4.6 and what to do if I get an access or rate-limit error.</pre><button type="button" class="copy" data-copy="prompt-allowance"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy prompt</span></button></div>
+        <p class="status" role="status" aria-live="polite"></p>
+      </li>
+    </ol>
+  </section>
+
+  <p class="heads-up">APInex is a third-party service that resells model access. It is not Anthropic. Read <a href="#faq-anthropic">Is this Anthropic?</a> before you paste anything private into it.</p>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details open="">
+      <summary>Is it really free?</summary>
+      <p>APInex lists a $0 per-token rate for this model and requires an active subscription to access it. Check the <a href="https://apinex.bond/models?provider=Free" rel="noopener">model catalog</a> before signing up.</p>
+    </details>
+    <details open="">
+      <summary>What is a token?</summary>
+      <p>A token is a small piece of text, on average about three quarters of an English word. Both what you send and what the model writes back count. A chat message is a few hundred to a few thousand tokens. Claude Code reads your files as it works, so longer coding sessions may consume more of your allowance.</p>
+    </details>
+    <details id="faq-anthropic" open="">
+      <summary>Is this Anthropic?</summary>
+      <p>No. APInex is a third-party service that resells access to models from several companies. It is not affiliated with Anthropic, and Anthropic says it does not endorse, maintain or audit third-party gateways like this one. You cannot check which model actually answers or what happens to your prompts on the way. So keep private data, client data, passwords, keys and code you are not allowed to share off it. Use it for side projects, learning and experiments.</p>
+    </details>
+    <details open="">
+      <summary>What if it stops working?</summary>
+      <p>Free offers like this can change or end any day. Check <a href="https://apinex.bond/status" rel="noopener">apinex.bond/status</a> first. The reliable fallback is the official Claude API at <a href="https://platform.claude.com" rel="noopener">platform.claude.com</a> (Claude Opus 4.6 costs $5 input and $25 output per 1M tokens there), or simply your own Claude plan: follow the reset steps from the Claude Code prompt to return to your normal login.</p>
+    </details>
+    <details open="">
+      <summary>What are the limits?</summary>
+      <p>The token allowance and request limit depend on your plan. The prompt in step 6 walks you through checking your account allowance.</p>
+    </details>
+  </section>
+<section class="nl" id="newsletter" aria-labelledby="nl-title">
+  <div class="nl-card">
+    <h2 id="nl-title">Get the next one by email</h2>
+    <p class="section-lede">Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.</p>
+    <form class="nl-form" data-spot="end" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Send me the next one</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Made by <a id="ig-link" href="https://www.instagram.com/skaleout/" rel="noopener">Jan</a>, <a href="https://skaleout.com" rel="noopener">Skale Out</a> · <a href="/newsletter">Newsletter</a></p>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,155 @@
+Skip to the prompt
+
+free tutorial · 3 tools, 1 prompt
+
+3 free tools that make your Claude limit last longer
+
+Ponytail, OmniRoute and Graphify. All three are free and open source.
+
+One prompt installs all three in Claude Code. Under it you find what each tool does and how you use it.
+
+Get the prompt
+The three tools
+Ponytail
+
+Makes Claude solve the same task with less code.
+
+In the tool's own benchmark (39 tasks in Claude Code, 5 runs each) the same agent used 45% fewer output tokens, took 41% less time and wrote 53% fewer lines of code.
+
+Ponytail on GitHub
+
+195k stars, MIT licence
+
+OmniRoute
+
+A small free program on your own computer that sends your requests to free AI providers. You connect them once. When one says you used up its free amount, it switches to the next.
+
+The free tokens come from other models, for example Gemini, DeepSeek or Kimi, not from Claude. You sign up with each provider yourself, and each provider sets its own free limit.
+
+OmniRoute on GitHub
+
+89k stars, MIT licence
+
+Graphify
+
+Builds a map of your project. Claude asks the map where something is and opens that file, not every file in the folder.
+
+The map is built on your computer and costs no AI credits to build.
+
+Graphify on GitHub
+
+150k stars, Apache-2.0 licence
+
+The prompt
+
+Paste it into Claude Code. It installs the three tools one after the other and ends with a short table of what to do next.
+
+install-3-tools.txt
+Copy
+Install three free tools for me, one after the other. Before each step, tell me in one line what you are about to do. If a step fails, show me the error and one thing to try, then go on with the next tool. Use only the commands below and only these official sources. Change nothing else on my computer: no other settings, keys or environment variables. If a command needs git and git is missing, tell me to install it from https://git-scm.com and go on.
+
+1. Ponytail (a skill that makes you solve a task with less code)
+   Source: github.com/DietrichGebert/ponytail
+   Run: claude plugin marketplace add DietrichGebert/ponytail
+   Then run: claude plugin install ponytail@ponytail
+
+2. Graphify (builds a map of a project, so you find a file without reading all of them)
+   Source: github.com/Graphify-Labs/graphify, package name graphifyy (with two y)
+   It needs uv. Check with: uv --version
+   If uv is missing, install it with the official installer. macOS and Linux: curl -LsSf https://astral.sh/uv/install.sh | sh
+   Windows: powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+   Run: uv tool install graphifyy
+   Then run: graphify install
+   If the graphify command is not found, run: uv tool update-shell
+   and tell me to open a new terminal, start Claude Code again and send this prompt again.
+
+3. OmniRoute (a free gateway on my computer that sends requests to free AI providers and switches when one runs out)
+   Source: github.com/cheaper-inference/OmniRoute, npm package omniroute
+   It needs Node.js 22.22 or newer (24 is fine). Check with: node --version
+   If Node.js is missing or older, skip this tool and tell me to install Node.js from https://nodejs.org first.
+   Run: npm install -g omniroute
+   If npm says it blocked install scripts, run this line: npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
+   Do not start OmniRoute and do not point any of my tools at it. I will do that myself.
+
+When all three steps are done, check each tool (claude plugin list, graphify --version, omniroute --version) and give me one table with these columns: tool, installed (yes or no), version, note (why it was skipped or what failed). Under the table write these three lines:
+Ponytail: close Claude Code and open it again. It is on in every new session.
+Graphify: open a project in Claude Code and type /graphify .
+OmniRoute: run omniroute in a terminal and leave it open, open http://localhost:20128, add a free provider under Providers, then start Claude Code in a second terminal with: omniroute run claude --model auto
+
+The box scrolls: the prompt covers all three tools, and Copy takes all of it. You need Claude Code, which is part of the Claude Pro and Max plans. Tested on a Mac with Claude Code on 19 November 2026.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+Open Claude Code
+
+In a terminal (on Windows: PowerShell), go to any folder and type claude. Or open the Claude desktop app and pick the Code tab. Start a new session.
+
+Tip No Claude Code yet? Anthropic's install guide is at docs.claude.com.
+
+Paste the prompt and send it
+
+Claude does every check and every install for you. It asks before it runs each command: read the command and allow it. Wait for the table at the end.
+
+Tip The most likely snag is Node.js. OmniRoute needs Node.js 22.22 or newer; on an older one the prompt skips OmniRoute and says so in the table. Install the current Node.js from nodejs.org and send the prompt again. Tools that are already installed are skipped. OmniRoute is the big one: about 2 minutes and 2.7 GB on disk.
+
+Ponytail: do nothing
+
+Close Claude Code and open it again. From now on Ponytail is on in every session and Claude writes less code for the same task.
+
+Tip /ponytail lite is gentler, /ponytail ultra is stricter, /ponytail off turns it off. /ponytail-review checks your last change.
+
+Graphify: map your project once
+
+Go to your project's folder in a terminal, type claude, then type /graphify . (the dot means "this folder"). It writes a folder graphify-out with graph.html, a picture of your project you can open in a browser. Then ask Claude as usual, for example "where do we apply the discount at checkout?".
+
+Tip After bigger changes, run /graphify . --update. It reads only the files that changed.
+
+OmniRoute: connect a free provider
+
+In a terminal type omniroute and leave that terminal open: OmniRoute works only while it runs. Open http://localhost:20128 in your browser. Go to Providers, pick a provider with a free tier, create a key on that provider's own site and paste it in. Add two or three providers, so there is a next one to switch to. OmniRoute keeps a list of free tiers: its free tiers guide
+
+Tip With no provider connected, nothing can answer. A new install starts empty.
+
+When you hit your Claude limit
+
+Close Claude Code. Make sure OmniRoute is still running (step 5), open a second terminal and start Claude Code through it: omniroute run claude --model auto. You keep working on the free models until your Claude limit resets. Your normal claude command stays as it was and still uses your Claude plan.
+
+Tip auto picks a connected provider for each request and moves to the next when one runs out. If Claude Code says it is not authorised, copy your OmniRoute key from the dashboard under Endpoints and start with omniroute run claude --model auto --api-key YOUR_KEY.
+
+Questions
+Does this cost money?
+
+The three tools are free and open source. OmniRoute's free tokens come from the free tiers of other providers. Some of them ask you to sign up, and a few ask for a card. You choose which ones you connect.
+
+Is it still Claude when I use OmniRoute?
+
+No. The free tiers are other models, for example Gemini, DeepSeek or Kimi. They are good enough to keep going, but the answers will differ from Claude. Use them for simpler work or until your limit resets.
+
+How much will I save?
+
+Ponytail's numbers are from its own benchmark, so your result depends on your project. Graphify publishes no number for the free tool. It saves the most in large projects, where Claude would otherwise open many files to find one.
+
+Is it safe?
+
+The prompt uses only the official install commands and the official sources named in it. OmniRoute runs on your own computer: the keys you paste in are stored there, and your requests go from there to the provider you connected. Two of the commands download an installer from the tool's own site (uv) or run install scripts (OmniRoute). Claude shows you each command before it runs. Graphify's installer adds its skill and three lines about itself to your Claude instructions file (~/.claude/CLAUDE.md); graphify uninstall takes them out again.
+
+How do I remove them?
+
+Ponytail: claude plugin uninstall ponytail@ponytail. Graphify: graphify uninstall, then uv tool uninstall graphifyy. OmniRoute: npm uninstall -g omniroute.
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

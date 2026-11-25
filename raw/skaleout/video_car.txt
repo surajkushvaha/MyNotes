@@ -1,0 +1,134 @@
+Skip to the prompt
+
+free tutorial · 1 prompt, 10 styles
+
+Viral Videos
+
+With one prompt in Claude and GPT
+
+A small sports car drifting on a cliff road in ten art styles, from one prompt. You get a 6 second looping animation you can post. Nothing to install.
+
+Get the prompt
+One prompt, ten styles
+
+Every clip below came from this exact prompt, sent once to Claude with only the style line changed. No follow up and no edits. One style, Embroidery, came out empty on the first send, so it was sent a second time. Results differ on every send, so yours will not look the same.
+
+01 Pop Art
+02 Voxel 3D
+03 Risograph
+04 Storybook
+05 X-Ray
+06 Candy World
+07 VHS Glitch
+08 Mosaic Tiles
+09 Chalkboard
+10 Embroidery
+The prompt
+
+Pick a style, tap Copy, paste it into the chat. That is the whole trick.
+
+1. Pick a style
+
+Pop Art
+Voxel 3D
+Risograph
+Storybook
+X-Ray
+Candy World
+VHS Glitch
+Mosaic Tiles
+Chalkboard
+Embroidery
+Write your own
+
+2. Copy and paste
+
+prompt.txt
+style: Pop Art
+Copy
+Create one self-contained HTML file that plays a 6 second looping animation in a 9:16 frame (a 1080x1920 canvas scaled to fit the window, black outside it). Draw everything in code: no images, no external files. For a 3D style you may load three.js from cdnjs.cloudflare.com; nothing else external.
+
+Scene: one small sports car drifts through a hairpin bend on a cliff road above the sea, seen from the side. Make the car cool: a low two door coupe with round headlights and a small rear spoiler, no logos. Make it fast and wild: the car slides sideways with its front wheels turned against the slide, the wheels spin, a big trail of tyre smoke and dust streams off the rear wheels, stones fly, the guard rail, the cliffs and the sea rush past behind it, and the drift never stops.
+
+Style: 1960s pop art, bold black outlines, flat loud primaries, halftone dot shading, comic burst shapes. Commit to this style completely: palette, shapes, line, texture, lighting and the way things move should all feel like it.
+
+Motion: smooth, driven by requestAnimationFrame, a gentle camera drift, at least three layers of parallax, something moving at every moment, and a seamless loop every 6 seconds. No text on screen. Reply with only the HTML file.
+
+
+Want another subject? Replace the Scene paragraph to animate anything: a cat surfing a wave, a rocket over your home town, your product on a turntable. Keep the first paragraph and the Motion paragraph as they are: they make the loop work.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+Open Claude or ChatGPT
+
+Go to claude.ai or chatgpt.com and start a new chat.
+
+Tip Free accounts may work. A paid plan is faster and handles long answers better.
+
+Pick, copy, paste, send
+
+Pick a style above, tap Copy, paste it into the chat and send it.
+
+Tip It can think for several minutes. The answer is one HTML file, so let it finish.
+
+Preview it
+
+In Claude the HTML shows up as an artifact you can watch right in the chat. In ChatGPT open it in the canvas preview if it shows one.
+
+Tip No preview? Copy the code into a file named drift.html and open it in your browser.
+
+Black screen or an error?
+
+Type "fix the error" in the same chat, or simply send the prompt again in a new chat.
+
+Tip That is normal. Some runs need a second try.
+
+Turn it into a video
+
+Make the browser window tall (or use your phone) and screen record about 6 seconds: on a Mac press Cmd+Shift+5, on Windows press Win+Alt+R (Xbox Game Bar) or use the Snipping Tool's record, on iPhone or Android use the built-in screen recorder. Then crop it to 9:16 in the Instagram editor or CapCut.
+
+Tip It loops every 6 seconds, so any 6 seconds work.
+
+Post it
+
+Post the loop on its own, or put several inside your own reel the way Jan did: one prompt, ten styles.
+
+Tip Run the same style twice and keep the better one. Every run is a new drawing.
+
+Questions
+Why does it take minutes?
+
+The chat writes a whole animation program from scratch, often hundreds of lines of code, and plans it before it writes. A few minutes is normal. Keep the tab open until it is done.
+
+Does it cost money?
+
+The prompt and this tutorial are free. Claude and ChatGPT both have free plans you can try. Free plans have limits and may stop long answers early, so a paid plan works more reliably. There is nothing else to buy or install.
+
+Can I use it commercially?
+
+The animation code the chat writes for you is yours to post, edit and use. Check each tool's terms for the details that apply to your plan.
+
+Can I change the subject?
+
+Yes. Rewrite the Scene paragraph with anything you like and keep the rest of the prompt. Pick a style above or type your own with "Write your own".
+
+Why does my car look different?
+
+Every run is a new drawing. The same prompt gives a different car each time, even in the same style. Send it again for another take, or tell the chat what to change, for example "make the car bigger".
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

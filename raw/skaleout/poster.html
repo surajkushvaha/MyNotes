@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Turn a product photo into a studio poster: the free prompt</title>
+<meta name="description" content="One free prompt for ChatGPT: attach a plain product photo, paste the prompt, and get a print style studio ad poster. Nothing to install.">
+<meta name="theme-color" content="#08080A">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://learn.skaleout.com/poster">
+<meta property="og:title" content="Turn a plain product photo into a studio poster">
+<meta property="og:description" content="Attach your photo, paste one prompt, get a print style ad poster. Free, in ChatGPT.">
+<meta property="og:image" content="https://learn.skaleout.com/poster/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Five plain product photos that become studio ad posters">
+<meta property="og:site_name" content="Skale Out">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/poster/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/InterTight-subset.woff" as="font" type="font/woff" crossorigin="">
+<link rel="stylesheet" href="/poster/style.css">
+<script src="/poster/app.js" defer=""></script>
+<link rel="stylesheet" href="/newsletter.css">
+<script defer="" src="/newsletter.js"></script>
+<script defer="" src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"></rect><path d="M15.5 8.5V5.5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"></path></g></symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 3.5v12M6.5 10.5 12 16l5.5-5.5M4.5 20.5h15"></path></symbol>
+</svg>
+
+<a class="skip" href="#prompt">Skip to the prompt</a>
+
+<header class="hero">
+  <p class="kicker">free prompt · ChatGPT · 1 photo in, 1 poster out</p>
+  <h1 class="title"><span class="g">Turn a plain product photo into a</span> <span class="g g-accent">studio poster</span></h1>
+  <p class="lede">Attach your photo, paste one prompt, and get a print style ad poster. Nothing to install.</p>
+  <a class="btn btn-primary" href="#prompt"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-down"></use></svg>Get the prompt</a>
+</header>
+
+<main>
+  <section class="examples" aria-labelledby="ex-h">
+    <h2 id="ex-h">Photo in, poster out</h2>
+    <p class="section-lede">Five products, five posters. Each pair: the plain photo on the left, the poster ChatGPT made from it on the right.</p>
+    <ul class="pairs" id="pair-grid">
+      <li><figure class="pair"><div class="pair-tiles">
+        <div class="tile"><span class="tag">your photo</span><img src="/poster/media/01-photo.jpg" width="540" height="720" loading="lazy" alt="Plain product photo: Senda coffee"></div>
+        <div class="tile" data-poster="01"><span class="tag">the poster</span><div class="ph">poster coming</div></div>
+      </div><figcaption><span class="n">01</span> Senda coffee, headline SENDA</figcaption></figure></li>
+      <li><figure class="pair"><div class="pair-tiles">
+        <div class="tile"><span class="tag">your photo</span><img src="/poster/media/02-photo.jpg" width="540" height="720" loading="lazy" alt="Plain product photo: Wireless headphones"></div>
+        <div class="tile" data-poster="02"><span class="tag">the poster</span><div class="ph">poster coming</div></div>
+      </div><figcaption><span class="n">02</span> Wireless headphones, headline LULL</figcaption></figure></li>
+      <li><figure class="pair"><div class="pair-tiles">
+        <div class="tile"><span class="tag">your photo</span><img src="/poster/media/03-photo.jpg" width="540" height="720" loading="lazy" alt="Plain product photo: Calle olive oil"></div>
+        <div class="tile" data-poster="03"><span class="tag">the poster</span><div class="ph">poster coming</div></div>
+      </div><figcaption><span class="n">03</span> Calle olive oil, headline CALLE</figcaption></figure></li>
+      <li><figure class="pair"><div class="pair-tiles">
+        <div class="tile"><span class="tag">your photo</span><img src="/poster/media/04-photo.jpg" width="540" height="720" loading="lazy" alt="Plain product photo: Trail shoe"></div>
+        <div class="tile" data-poster="04"><span class="tag">the poster</span><div class="ph">poster coming</div></div>
+      </div><figcaption><span class="n">04</span> Trail shoe, headline SCREE</figcaption></figure></li>
+      <li><figure class="pair"><div class="pair-tiles">
+        <div class="tile"><span class="tag">your photo</span><img src="/poster/media/05-photo.jpg" width="540" height="720" loading="lazy" alt="Plain product photo: Table lamp"></div>
+        <div class="tile" data-poster="05"><span class="tag">the poster</span><div class="ph">poster coming</div></div>
+      </div><figcaption><span class="n">05</span> Table lamp, headline NOOK</figcaption></figure></li>
+    </ul>
+    <p class="honest">Each poster: one product photo and this prompt in ChatGPT.</p>
+  </section>
+
+  <section class="prompt" id="prompt" aria-labelledby="prompt-h" tabindex="-1" data-status="">
+    <h2 id="prompt-h">The prompt</h2>
+    <p class="section-lede">Change the six fields to fit your product. The prompt below updates as you type.</p>
+    <div class="fields">
+      <div class="field"><label for="f-bg">Background colour</label><input id="f-bg" data-slot="bg" type="text" value="" placeholder="deep navy blue" maxlength="140" autocomplete="off"></div>
+      <div class="field"><label for="f-hc">Headline colour</label><input id="f-hc" data-slot="hc" type="text" value="" placeholder="burnt orange" maxlength="140" autocomplete="off"></div>
+      <div class="field"><label for="f-hl">Headline (your brand name)</label><input id="f-hl" data-slot="hl" type="text" value="" placeholder="SENDA" maxlength="140" autocomplete="off"></div>
+      <div class="field"><label for="f-sl">Small line under it</label><input id="f-sl" data-slot="sl" type="text" value="" placeholder="WHOLE BEAN COFFEE" maxlength="140" autocomplete="off"></div>
+      <div class="field wide"><label for="f-sc">A real place for the product</label><input id="f-sc" data-slot="sc" type="text" value="" placeholder="a worn oak kitchen counter next to a small hand grinder" maxlength="140" autocomplete="off"></div>
+      <div class="field wide"><label for="f-li">One light</label><input id="f-li" data-slot="li" type="text" value="" placeholder="low morning sun through a window, one long shadow" maxlength="140" autocomplete="off"></div>
+    </div>
+    <div class="card">
+      <div class="card-head">
+        <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg>
+        <span class="file">prompt.txt</span>
+        <span class="meta">paste it into ChatGPT with your photo</span>
+        <button type="button" class="copy" data-copy="prompt-text"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+      </div>
+      <pre class="prompt-text" id="prompt-text">Turn the product in my photo into a premium print ad poster. The product must stay exactly as it is in the photo: same shape, same colours, same label, same words. Build the poster around it. Do not add any text to the product itself. Format: one full-bleed portrait poster, 9:16, high resolution. No mockup, no frame, no border. Taste rules: Two main colours only: <mark class="slot" data-slot-out="bg">deep navy blue</mark> for the background and <mark class="slot" data-slot-out="hc">burnt orange</mark> for the headline. The product keeps its own colours. One huge headline, tightly spaced condensed type, across the top third: <mark class="slot" data-slot-out="hl">SENDA</mark>. Under it one small line in the same typeface: <mark class="slot" data-slot-out="sl">WHOLE BEAN COFFEE</mark>. Put the product in a real place: <mark class="slot" data-slot-out="sc">a worn oak kitchen counter next to a small hand grinder</mark>. Light it with one light: <mark class="slot" data-slot-out="li">low morning sun through a window, one long shadow</mark>. Lots of empty space. A faint printed paper grain. No stickers, badges, arrows, glow, sparkles, extra slogans or extra fonts. Spell every word exactly as written above.</pre>
+    </div>
+    <button type="button" class="btn btn-primary btn-wide copy-wide" data-copy="prompt-text"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy the prompt</span></button>
+    <p class="status" role="status" aria-live="polite"></p>
+    <p class="field-note">The six highlighted parts are your fields: the two colours, the headline, the small line under it, the place and the light. An empty field keeps the example (a coffee bag called SENDA).</p>
+  </section>
+
+<aside class="nl nl-inline" aria-label="Newsletter signup">
+  <div class="nl-strip">
+    <p class="nl-strip-title">Get 30 bonus animation styles and new freebies when I create them!</p>
+    <form class="nl-form" data-spot="mid" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Sign me up</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</aside>
+
+
+  <section class="steps" id="guide" aria-labelledby="steps-h">
+    <h2 id="steps-h">Step by step</h2>
+    <p class="section-lede">Six steps, about five minutes.</p>
+    <ol class="step-list">
+      <li>
+        <h3>Open ChatGPT and start a new chat</h3>
+        <p>Go to <strong>chatgpt.com</strong> and sign in. Click <strong>New chat</strong> at the top of the left sidebar.</p>
+        <p class="tip"><span class="tip-k">Tip</span> A fresh chat matters. An old chat can pull its old style into your poster.</p>
+      </li>
+      <li>
+        <h3>Attach your product photo</h3>
+        <p>Click the <strong>+</strong> button at the left of the message box and choose <strong>Add photos &amp; files</strong>. Pick one photo of your product. Wait until the small thumbnail shows in the box.</p>
+        <p class="tip"><span class="tip-k">Tip</span> A plain photo of the product on a light background works best. One product, nothing else in the picture.</p>
+      </li>
+      <li>
+        <h3>Paste the prompt and send</h3>
+        <p>Click in the message box, paste the prompt you copied above and press <strong>Enter</strong>. ChatGPT draws the poster. It takes about a minute.</p>
+        <p class="tip"><span class="tip-k">Tip</span> If ChatGPT only answers with text, send this one line: <em>make the image now</em>.</p>
+      </li>
+      <li>
+        <h3>Check the spelling of the headline</h3>
+        <p>Read every word on the poster. Image tools sometimes swap a letter in a headline.</p>
+        <p class="tip"><span class="tip-k">Tip</span> If a word is wrong, reply: <em>fix the spelling of HEADLINE, keep everything else</em> (put your real headline in place of HEADLINE).</p>
+      </li>
+      <li>
+        <h3>Download the image</h3>
+        <p>Click the poster to open it, then click the <strong>download</strong> arrow at the top right. On a phone, press and hold the image and choose Save.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Post it as it is, or print it. The image keeps full size.</p>
+      </li>
+      <li>
+        <h3>Try another background and headline pair</h3>
+        <p>Change the two colours or the headline above, copy the new prompt and send it in a new chat with the same photo.</p>
+        <p class="tip"><span class="tip-k">Tip</span> Pick the two colours from your product: its main colour for the headline, a calm neighbour of it for the background.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="skill" id="skill" aria-labelledby="skill-h">
+    <h2 id="skill-h">Optional: let Claude fill in the six fields</h2>
+    <p class="section-lede">Not sure which colours, place and light fit your product? This small Claude skill reads your photo or your description, picks the six fields and gives you the full prompt, ready to paste into ChatGPT.</p>
+    <div class="card">
+      <div class="dl-row">
+        <a class="btn btn-primary" href="/poster/poster-prompt-skill.zip" download="poster-prompt-skill.zip"><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-down"></use></svg>Download the skill</a>
+        <p class="dl-meta"><strong>poster-prompt-skill.zip</strong> · free · no sign up</p>
+      </div>
+      <ol>
+        <li>Open claude.ai, then click your name, <strong>Settings</strong>, <strong>Capabilities</strong>, <strong>Skills</strong>.</li>
+        <li>Upload <strong>poster-prompt-skill.zip</strong>. Then start a chat, attach your product photo and ask: <em>fill in the poster prompt for this product</em>.</li>
+      </ol>
+      <p class="grey">Not yet tested. The prompt above is the tested part.</p>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details open="">
+      <summary>Does it cost money?</summary>
+      <p>The prompt and this page are free. You need a ChatGPT account. The free plan allows only a few images per day, so if ChatGPT says you hit the limit, try again later or use a paid plan.</p>
+    </details>
+    <details open="">
+      <summary>Why is some text on my poster wrong?</summary>
+      <p>Image tools sometimes swap or drop a letter. Reply with: <em>fix the spelling of HEADLINE, keep everything else</em>, with your real headline in place of HEADLINE. A short headline of one word is the safest.</p>
+    </details>
+    <details open="">
+      <summary>Can I use it for clients?</summary>
+      <p>Yes. It is your photo and your poster, so you can use it for your own brand or for a client's product. Only use photos you have the right to use.</p>
+    </details>
+    <details open="">
+      <summary>My product has no brand name.</summary>
+      <p>Any short word works as the headline: the product name, the kind of product, or an invented name. Keep it to one or two words so it stays big and sharp.</p>
+    </details>
+    <details open="">
+      <summary>Why does mine look different from the examples?</summary>
+      <p>Every run is a new take, and your photo, colours and place are different from ours. Send the same prompt again in a new chat for another take.</p>
+    </details>
+  </section>
+<section class="nl" id="newsletter" aria-labelledby="nl-title">
+  <div class="nl-card">
+    <h2 id="nl-title">Get the next one by email</h2>
+    <p class="section-lede">Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.</p>
+    <form class="nl-form" data-spot="end" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Send me the next one</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Made by <a id="ig-link" href="https://www.instagram.com/skaleout/" rel="noopener">Jan</a>, <a href="https://skaleout.com" rel="noopener">Skale Out</a> · <a href="/newsletter">Newsletter</a></p>
+</footer>
+
+
+</body></html>

@@ -1,0 +1,129 @@
+Skip to the prompts
+
+free tutorial · 10 prompts, any topic
+
+Turn any topic into
+10 study graphics
+
+With ChatGPT
+
+One prompt per format. Type your topic, paste the prompt into ChatGPT and get a graphic you can study from. Nothing to install.
+
+Get the prompts
+The ten formats
+
+Ten ways to see the same topic, here "how a rocket reaches orbit". They were made with OpenAI's image model, the one inside ChatGPT, in these same ten formats. Tap a picture to see it full size. Yours will differ a little, because every run makes a new image.
+
+01 Blueprint
+02 Exploded view
+03 Cutaway
+04 Timeline
+05 Flowchart
+06 Sketchnotes
+07 Comic strip
+08 Mind map
+09 Whiteboard
+10 Isometric
++20more formats, free by email
++ Format Pack
+The prompts
+
+Pick a format and type your topic: the prompt below updates. Then copy it.
+
+Pick a format
+
+Blueprint
+Exploded view
+Cutaway
+Timeline
+Flowchart
+Sketchnotes
+Comic strip
+Mind map
+Whiteboard
+Isometric
+Your topic
+prompt.txt
+format: Blueprint
+Copy
+Create an image. A detailed engineering blueprint about how a rocket reaches orbit: crisp white linework on deep blueprint blue with a fine grid and draftsman capital lettering. A large main drawing of the subject with dimension lines and 7 numbered callouts, each a name plus a one-line note. On the side: three small detail insets marked A, B and C, a specification table with 6 to 8 rows of real numbers, and a short numbered notes list. A title block in the bottom corner.
+
+Make it a portrait image with a 2:3 ratio. The image is the page itself: flat, edge to edge, not a photo of a poster, no desk, no hands, no frame around it. Make it look like a finished page from a premium illustrated study guide: full, with no big empty areas. Write real, accurate content about the topic: real facts and real numbers, no filler text and nothing made up. Small text is fine, but every word must be crisp and spelled correctly. One consistent illustration style, careful alignment. No logos, brand names or watermark.
+
+Want another topic? Change the topic in the field and keep the rest of the prompt as it is.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+Open ChatGPT
+
+Go to chatgpt.com and sign in. A free account works.
+
+Tip Free accounts can make fewer images per day. If it says you reached the limit, try again later.
+
+Pick a format and type your topic
+
+On this page tap a format, then type what you want to study in the topic field.
+
+Tip A short, clear topic works best, for example "how vaccines work" or "the water cycle".
+
+Copy, paste and send
+
+Tap Copy, open a new chat in ChatGPT, paste the prompt and send it.
+
+Tip Start a new chat for each topic, so nothing from an earlier chat gets mixed in.
+
+Wait for the image
+
+ChatGPT draws the image in the chat. It can take a minute or two.
+
+Tip Do not send the prompt again while it works. If nothing shows up after a few minutes, send it again in a new chat.
+
+Fix a misspelled word
+
+Read every label. If a word is wrong, reply in the same chat: "fix the spelling of WORD, keep everything else the same".
+
+Tip Put the wrong word in place of WORD, and fix one word at a time.
+
+Download it and use it
+
+Open the image and use the download button on it. Then add it to your notes, a slide or a post.
+
+Tip Want the same topic in another format? Paste a different prompt in the same chat and change nothing else.
+
+Questions
+Does it cost money?
+
+The prompts and this tutorial are free. ChatGPT has a free plan, but it limits how many images you can make each day. A paid plan raises the limit. There is nothing else to buy or install.
+
+Can I use it for school or work?
+
+Yes, the images you make are yours to use as study material or in a presentation. Check OpenAI's terms for what applies to your plan. Check the facts too: an image model can get a detail wrong, so compare the labels with a trusted source.
+
+Why does mine look different from the examples?
+
+Every run makes a new image, and a different topic changes what is drawn. The examples show one run each. If you do not like yours, send the prompt again in a new chat, or reply with what to change, for example "make the labels bigger".
+
+Can I use another topic or language?
+
+Yes, any topic works. For another language, add a line at the end of the prompt, for example "Write all labels in Spanish". Spelling can be less reliable in other languages, so read every label.
+
+Can I make all ten at once?
+
+Yes. Send the ten prompts one by one in the same chat, one after the other, and wait for each image before you send the next.
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

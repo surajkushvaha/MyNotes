@@ -1,0 +1,166 @@
+Skip to the download
+
+free download · 6 Claude skills
+
+6 animation skills for Claude
+
+One line in, a finished 9:16 animation out
+
+Type a command like /isometric a tiny ramen bar and Claude builds a 5 second looping animation you can screen record and post. Upload them once, all six are free.
+
+Get the skills
+The skills
+
+One ZIP with all six, or one ZIP per skill. Each skill is a single text file that tells Claude how to build that kind of animation.
+
+Download all 6 skills
+
+23 KB · free · no sign up
+
+Keep the ZIP where it lands, usually your Downloads folder. In step 1 of the guide you upload the skills to Claude. Skills need a paid Claude plan with skills turned on. On a plan without skills, use Copy as prompt on any card below.
+
+01
+/isometric
+
+A tiny 3D world that builds itself piece by piece, then the lights come on.
+
+/isometric a tiny ramen bar
+Copy
+isometric.zip
+Copy as prompt
+02
+/globe
+
+A dotted globe with glowing flight arcs leaving one city.
+
+/globe every flight leaving Tokyo
+Copy
+globe.zip
+Copy as prompt
+03
+/scale
+
+A true-scale pull back that ends on one huge number.
+
+/scale Earths inside Jupiter
+Copy
+scale.zip
+Copy as prompt
+04
+/bar-race
+
+A bar chart race that ends on a big overtake.
+
+/bar-race most visited cities 2000 to 2026
+Copy
+bar-race.zip
+Copy as prompt
+05
+/versus
+
+A split screen of two stick figures: quits on day 3 against still going on day 112.
+
+/versus hype vs habit
+Copy
+versus.zip
+Copy as prompt
+06
+/zack-d-films
+
+A 3D cartoon x-ray explainer: watch an effect travel through the body.
+
+/zack-d-films what coffee does to your brain
+Copy
+zack-d-films.zip
+Copy as prompt
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+The guide
+
+Six short steps. Pick the way that fits your Claude: step 1 for the Claude app, step 2 for Claude Code, step 3 if you have no skills.
+
+In the Claude app: add the skills
+
+Open the Claude app or claude.ai, then Settings, then Capabilities, then Skills. Turn skills on, click upload and choose a skill ZIP from this page. Upload the six ZIPs one at a time.
+
+Open a new chat and type a command with your subject, for example /isometric a tiny ramen bar. Claude builds the animation as an artifact next to the chat.
+
+Tip Upload the six single ZIPs (isometric.zip, globe.zip and so on), one at a time. The all-in-one ZIP is for Claude Code in step 2.
+
+In Claude Code: unzip into the skills folder
+
+Unzip motion-skills.zip into ~/.claude/skills/ so each skill sits in its own folder (for example ~/.claude/skills/isometric/SKILL.md). On Windows that folder is %USERPROFILE%\.claude\skills\. Restart Claude Code, open a session and type a command with your subject.
+
+Tip If a command is not found, check that SKILL.md sits directly inside the skill's folder, not one folder deeper, then restart Claude Code again.
+
+No skills on your plan? Copy as prompt
+
+Click Copy as prompt on a card above, open a new chat in Claude, paste, and add your subject on a new line at the end, for example Subject: a tiny bookshop. Send it.
+
+Tip The prompt is long on purpose, it holds the whole recipe. Paste all of it, then add your subject below it.
+
+Black screen or an error?
+
+Type fix the error and send it. Claude repairs the file and shows it again. If it is still broken, send the same command again in a new chat.
+
+Tip Animations are long files. If the reply stops halfway, type continue, or start a new chat and send the command again.
+
+Turn it into a video
+
+Open the animation in the artifact view and make the preview as tall as you can. Screen record it: on a Mac press Cmd+Shift+5, on Windows press Win+Alt+R, on a phone use the built-in screen recorder. Record one or two loops, then crop the video to 9:16 in your editor.
+
+Tip Record the animation on its own, with nothing else on screen. Each loop lasts 5 seconds, so a 10 second recording holds two.
+
+Post it
+
+Upload the 9:16 video as a Reel, TikTok or Short. Add a caption that names the command you typed, so people can try it too.
+
+Tip Post the version you like best. Run the same command a few times with different subjects and keep the strongest result.
+
+Clips from the reel
+
+Made with these skills in Claude Code, then polished in one round of fixes. Your first result will look different, and that is normal.
+
+01 /isometric
+02 /globe
+03 /scale
+04 /bar-race
+05 /versus
+06 /zack-d-films
+Questions
+Why does it take a minute?
+
+Claude writes a whole animation as code, and these files are long. Expect about a minute or two for the reply, then a few seconds to play. Longer subjects with many parts can take a bit more.
+
+Does it cost money?
+
+The skills and this guide are free. Skills in the Claude app and in Claude Code need a paid Claude plan with skills turned on. Without skills, Copy as prompt works in a normal chat, but a long reply can get cut off on a free plan, so a paid plan is safer.
+
+Can I use it commercially?
+
+Yes, the animations you make are yours to post, sell and use in client work. Check Anthropic's terms for your plan for the details.
+
+Can I change the subject?
+
+Yes, that is the point. Type the command, then any subject in one line: /isometric a tiny bookshop, /globe every flight leaving London, /zack-d-films what sugar does to your mood.
+
+Why does mine look different from the reel?
+
+Every run is built fresh, so no two results match. The clips above went through one round of fixes after the first result. Expect a simpler first version and tell Claude what to change, for example "make the title bigger" or "slow the camera down".
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

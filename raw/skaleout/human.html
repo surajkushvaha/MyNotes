@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Make Claude write like a human: the free tutorial</title>
+<meta name="description" content="Install the free Humanizer skill in Claude Code or the Claude app and have Claude rewrite any text so it stops sounding like AI. Commands and a prompt to copy.">
+<meta name="theme-color" content="#08080A">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://learn.skaleout.com/human">
+<meta property="og:title" content="Make Claude write like a human">
+<meta property="og:description" content="The free tutorial behind the reel: install the Humanizer skill and have Claude rewrite any text so it stops sounding like AI.">
+<meta property="og:image" content="https://learn.skaleout.com/human/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An AI written post with its tells marked in red, next to the rewrite that sounds like a person">
+<meta property="og:site_name" content="Skale Out">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/human/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/InterTight-subset.woff" as="font" type="font/woff" crossorigin="">
+<link rel="stylesheet" href="/human/style.css">
+<script src="/human/app.js" defer=""></script>
+<link rel="stylesheet" href="/newsletter.css">
+<script defer="" src="/newsletter.js"></script>
+<script defer="" src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+<symbol id="m-claude" viewBox="0 0 24 24"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"></path></symbol>
+<symbol id="i-term" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="4.25" width="18.5" height="15.5" rx="3"></rect><path d="M7 9.5l3 2.5-3 2.5M12.5 15h4.5"></path></g></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 2.75h8l4.25 4.25v14.25H6z M14 2.75V7h4.25"></path></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="8.5" y="8.5" width="12" height="12" rx="2.5"></rect><path d="M15.5 8.5V5.5a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h3"></path></g></symbol>
+</svg>
+
+<a class="skip" href="#install">Skip to the install steps</a>
+
+<header class="hero">
+  <p class="kicker">free tutorial · one free skill</p>
+  <h1 class="title"><span class="g">Make Claude write like a</span> <span class="g g-accent">human</span></h1>
+  <p class="subtitle">With <span class="tool"><svg class="mark" aria-hidden="true" focusable="false"><use href="#m-claude"></use></svg>Claude</span> and the free Humanizer skill</p>
+  <p class="lede">Paste any text and Claude rewrites it so it stops sounding like AI. It keeps what you said and cuts the tells people spot in one line. Install it once, in Claude Code or in the Claude app.</p>
+  <a class="btn btn-primary" href="#skill">Get the skill</a>
+</header>
+
+<main>
+  <section class="prompt" id="skill" aria-labelledby="skill-h" tabindex="-1">
+    <h2 id="skill-h">The skill</h2>
+    <p class="section-lede">Humanizer is a free, open source skill by blader on GitHub (<a href="https://github.com/blader/humanizer" rel="noopener">github.com/blader/humanizer</a>, MIT licence). A skill is a set of written rules Claude reads when it needs them. Pick the place you use Claude in the guide below.</p>
+    <p class="dl-line"><a class="btn btn-primary" href="https://github.com/blader/humanizer/archive/refs/heads/main.zip" rel="noopener">Download the skill (ZIP)</a></p>
+    <p class="section-lede">Or open <a href="https://github.com/blader/humanizer" rel="noopener">github.com/blader/humanizer</a>, click the green <strong>Code</strong> button, then <strong>Download ZIP</strong>. Once it is installed (the guide below), use it anywhere with this prompt in a new chat:</p>
+    <div class="round" data-status="">
+      <h3>Anywhere: copy this prompt</h3>
+      <p>Works in the Claude app and in Claude Code. Put your text in place of the brackets. The sample of your own writing is optional: with it, the rewrite sounds more like you.</p>
+      <div class="card">
+        <div class="card-head">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-file"></use></svg>
+          <span class="file">prompt.txt</span>
+          <span class="meta">humanizer</span>
+          <button type="button" class="copy" data-copy="p1" data-done="Copied. Paste it into a new chat, add your text and send."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+        </div>
+<pre class="prompt-text" id="p1">Use the humanizer skill to rewrite the text below so it sounds like a person wrote it. Keep every fact and every claim. Cut the signs of AI writing: AI words like delve and tapestry, lists of three by habit, summary lines at the end, "it's not X, it's Y" lines and long dashes. If I give you a sample of my own writing, match its voice.
+
+My text:
+<mark class="slot">[paste your text here]</mark>
+
+A sample of my writing (optional):
+<mark class="slot">[paste 2 or 3 paragraphs you wrote yourself, or delete these two lines]</mark></pre>
+      </div>
+      <button type="button" class="btn btn-primary btn-wide copy-wide" data-copy="p1" data-done="Copied. Paste it into a new chat, add your text and send."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy the prompt</span></button>
+      <p class="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="note">
+      <p><strong>What you get back.</strong> Claude shows a first rewrite, a short note on what still sounds artificial, and the final version. Copy the final one. Want a different take? Send "Rewrite it again, shorter" or "Keep more of my wording".</p>
+    </div>
+  </section>
+
+  <aside class="nl nl-inline" aria-label="Newsletter signup">
+  <div class="nl-strip">
+    <p class="nl-strip-title">Get 30 bonus animation styles and new freebies when I create them!</p>
+    <form class="nl-form" data-spot="mid" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Sign me up</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</aside>
+
+
+  <section class="install" id="install" aria-labelledby="install-h" tabindex="-1">
+    <h2 id="install-h">The guide</h2>
+
+    <div class="tabs" role="group" aria-label="Where you use Claude">
+      <a class="tab" href="#code">Claude Code</a>
+      <a class="tab" href="#app">Claude app (claude.ai)</a>
+    </div>
+
+    <h3 class="sub" id="code">Install it in Claude Code</h3>
+    <ol class="step-list">
+      <li>
+        <h3>Open Claude Code</h3>
+        <p>Open your terminal and type <code>claude</code>, or open Claude Code in your editor.</p>
+        <p class="tip"><span class="tip-k">Tip</span> The install needs Claude Code 2.1.142 or newer. Check with <code>claude --version</code> in your terminal and update with <code>claude update</code>.</p>
+      </li>
+      <li>
+        <h3>Add the skill's marketplace</h3>
+        <p>Type this into Claude Code and press Enter.</p>
+        <div class="cmd" data-status="">
+          <div class="card">
+            <div class="card-head">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-term"></use></svg>
+              <span class="file">in Claude Code</span>
+              <span class="meta"></span>
+              <button type="button" class="copy" data-copy="c1" data-done="Copied. Paste it into Claude Code and press Enter."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+            </div>
+<pre class="prompt-text" id="c1">/plugin marketplace add blader/humanizer</pre>
+          </div>
+          <p class="status" role="status" aria-live="polite"></p>
+        </div>
+      </li>
+      <li>
+        <h3>Install the skill</h3>
+        <p>Then type this and press Enter.</p>
+        <div class="cmd" data-status="">
+          <div class="card">
+            <div class="card-head">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-term"></use></svg>
+              <span class="file">in Claude Code</span>
+              <span class="meta"></span>
+              <button type="button" class="copy" data-copy="c2" data-done="Copied. Paste it into Claude Code and press Enter."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+            </div>
+<pre class="prompt-text" id="c2">/plugin install humanizer@humanizer</pre>
+          </div>
+          <p class="status" role="status" aria-live="polite"></p>
+        </div>
+        <p class="tip"><span class="tip-k">Tip</span> Type <code>/humanizer</code> to check it is there. If it does not show up, quit Claude Code and start it again.</p>
+      </li>
+      <li>
+        <h3>Older Claude Code? Use this instead</h3>
+        <p>If you cannot update, run this in your terminal (not inside Claude Code). It needs Node.js.</p>
+        <div class="cmd" data-status="">
+          <div class="card">
+            <div class="card-head">
+              <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-term"></use></svg>
+              <span class="file">in your terminal</span>
+              <span class="meta"></span>
+              <button type="button" class="copy" data-copy="c3" data-done="Copied. Paste it into your terminal and press Enter."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+            </div>
+<pre class="prompt-text" id="c3">npx skills add blader/humanizer --global --agent claude-code</pre>
+          </div>
+          <p class="status" role="status" aria-live="polite"></p>
+        </div>
+      </li>
+    </ol>
+
+    <h3 class="sub" id="app">Install it in the Claude app (claude.ai)</h3>
+    <p class="section-lede">Uploading your own skills needs a paid plan (Pro or higher) and code execution turned on.</p>
+    <ol class="step-list">
+      <li>
+        <h3>Turn on code execution</h3>
+        <p>In claude.ai go to <strong>Settings &gt; Capabilities</strong> and switch on <strong>Code execution and file creation</strong>. In the newer settings layout it is called <strong>Create and edit files</strong>.</p>
+      </li>
+      <li>
+        <h3>Download the skill</h3>
+        <p>Open <a href="https://github.com/blader/humanizer" rel="noopener">github.com/blader/humanizer</a>, click the green <strong>Code</strong> button, then <strong>Download ZIP</strong>. Keep the ZIP as it is.</p>
+      </li>
+      <li>
+        <h3>Upload it</h3>
+        <p>In claude.ai go to <strong>Customize &gt; Skills</strong>. Click <strong>+</strong>, then <strong>Create skill</strong>, then <strong>Upload a skill</strong>, and pick the ZIP. Humanizer shows up in your list: make sure its switch is on.</p>
+        <p class="tip"><span class="tip-k">Tip</span> If the upload says the folder name does not match the skill name: unzip the file, rename the folder that holds <code>SKILL.md</code> from <code>humanizer-main</code> to <code>humanizer</code>, zip that folder again (Mac: right-click, Compress; Windows: right-click, Send to, Compressed folder) and upload the new ZIP.</p>
+      </li>
+    </ol>
+
+    <h3 class="sub" id="use">Then use it in Claude Code</h3>
+    <p class="section-lede">Start a new chat and give it your text.</p>
+    <div class="round" data-status="">
+      <h3>In Claude Code: type the skill's name</h3>
+      <p>Type <code>/humanizer</code>, paste your text under it and send.</p>
+      <div class="card">
+        <div class="card-head">
+          <svg class="ico" aria-hidden="true" focusable="false"><use href="#i-term"></use></svg>
+          <span class="file">in Claude Code</span>
+          <span class="meta"></span>
+          <button type="button" class="copy" data-copy="u1" data-done="Copied. Paste it into Claude Code, put your text in place of the brackets and send."><svg class="ico" aria-hidden="true" focusable="false"><use href="#i-copy"></use></svg><span class="copy-label">Copy</span></button>
+        </div>
+<pre class="prompt-text" id="u1">/humanizer
+
+[paste your text here]</pre>
+      </div>
+      <p class="status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+
+  <section class="compare" aria-labelledby="compare-h">
+    <h2 id="compare-h">Before and after</h2>
+    <p class="section-lede">The post from the reel. Red marks the signs of AI writing.</p>
+    <div class="pair">
+      <figure class="post post-before">
+        <figcaption><span class="badge badge-bad">Before</span> sounds like AI</figcaption>
+        <p><mark class="tell">In today's fast-paced world</mark>, AI is reshaping how we create. Let's <mark class="tell">delve</mark> into the <mark class="tell">rich tapestry</mark> of tools that make work <mark class="tell">seamless, efficient and scalable</mark> <mark class="tell tell-dash"><span class="dash" role="img" aria-label="long dash"></span></mark> because the future is already here. <mark class="tell">Ultimately, it's not just about tools, it's about transformation.</mark></p>
+      </figure>
+      <figure class="post post-after">
+        <figcaption><span class="badge badge-good">After</span> sounds like a person</figcaption>
+        <p>I use AI every day now. Here are the three tools I open first, and what each one is actually good for.</p>
+      </figure>
+    </div>
+    <p class="fine">The red bar in the before text stands for a long dash (the em dash), which AI puts everywhere. The before post was written for the reel as a typical AI post; the after follows the skill's rules. Your own rewrite will read differently: every run is new.</p>
+  </section>
+
+  <section class="signs" aria-labelledby="signs-h">
+    <h2 id="signs-h">The signs it removes</h2>
+    <p class="section-lede">Wikipedia's editors keep a public list of the signs of AI writing: <a href="https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing" rel="noopener">Wikipedia: Signs of AI writing</a>. Humanizer turns that list into rules. The five you see most:</p>
+    <ol class="sign-list">
+      <li><h3>AI words</h3><p>Words people rarely use but AI loves: delve, tapestry, seamless, testament, landscape, showcasing. The skill swaps them for plain words.</p></li>
+      <li><h3>Everything in threes</h3><p>"Seamless, efficient and scalable." AI lists three things by habit. The skill keeps as many items as the point needs.</p></li>
+      <li><h3>Summary endings</h3><p>A big closing line after every paragraph: "Ultimately...", "Let that sink in." The skill ends on the last real fact instead.</p></li>
+      <li><h3>"It's not X, it's Y"</h3><p>A contrast nobody asked for: "It's not just about tools, it's about transformation." The skill says the point directly.</p></li>
+      <li><h3>Long dashes everywhere</h3><p>The em dash used to join every other clause. The skill uses periods, commas or colons, and keeps dashes only if your own writing sample uses them.</p></li>
+    </ol>
+    <p class="fine">It checks 26 patterns in all; the full list is in the <a href="https://github.com/blader/humanizer#the-26-patterns" rel="noopener">skill's README</a>.</p>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">Questions</h2>
+    <details open="">
+      <summary>Does it cost money?</summary>
+      <p>The skill is free and open source (MIT licence). You need Claude itself: Claude Code, or a paid Claude plan to upload skills in the Claude app.</p>
+    </details>
+    <details open="">
+      <summary>Will it get my text past AI detectors?</summary>
+      <p>No, and it does not try to. It rewrites for human readers. Its own README says detectors still flag most of its output.</p>
+    </details>
+    <details open="">
+      <summary>Will it change what I said?</summary>
+      <p>It keeps every claim from your text and changes how it is said. Read the final version before you post it, and tell Claude what to put back if something is missing.</p>
+    </details>
+    <details open="">
+      <summary>I like my dashes. Can I keep them?</summary>
+      <p>Yes. Add a sample of your own writing to the prompt. The skill follows the sample's rhythm, words and punctuation, dashes included.</p>
+    </details>
+    <details open="">
+      <summary>Claude did not use the skill. What now?</summary>
+      <p>In the Claude app check that Humanizer is switched on under Customize &gt; Skills and that code execution is on, then name the skill in your message, as the prompt above does. In Claude Code type <code>/humanizer</code> at the start of the message.</p>
+    </details>
+  </section>
+<section class="nl" id="newsletter" aria-labelledby="nl-title">
+  <div class="nl-card">
+    <h2 id="nl-title">Get the next one by email</h2>
+    <p class="section-lede">Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.</p>
+    <form class="nl-form" data-spot="end" novalidate="">
+      <label class="nl-trap">Leave this empty <input class="nl-hp" name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <input class="nl-input" name="email" type="email" required="" maxlength="254" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Your email">
+      <button class="btn btn-primary" type="submit">Send me the next one</button>
+      <p class="nl-fine">Email me new tutorials from Skale Out. Unsubscribe any time with one click.</p>
+      <p class="nl-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <p>Made by <a href="https://www.instagram.com/skaleout/" rel="noopener">Jan</a>, <a href="https://skaleout.com" rel="noopener">Skale Out</a> · <a href="/newsletter">Newsletter</a></p>
+  <p class="credit">Humanizer is made by <a href="https://github.com/blader" rel="noopener">blader</a> and shared under the MIT licence. This page links to it and does not host its files.</p>
+</footer>
+
+
+</body></html>

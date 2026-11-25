@@ -1,0 +1,36 @@
+Learn my video style from the reels I like. This chat is open on my folder "my-edits", which holds the folders "raw clips", "references" and "renders". The tools are installed: yt-dlp, FFmpeg (with ffprobe) and Whisper (the "whisper" command, or whisper.cpp through "npx hyperframes transcribe"). If one of them is missing, tell me which one and stop.
+
+The links to 3 to 5 reels I like are at the end of this message.
+
+For each link:
+1. Download it with yt-dlp into "references", named by the video id:
+   yt-dlp -o "references/%(id)s.%(ext)s" "<link>"
+   If a download fails because the site wants me logged in, tell me. You may retry with --cookies-from-browser <my browser> only after I say yes and name my browser. For YouTube links, if yt-dlp warns about a missing JavaScript runtime, retry with --js-runtimes node.
+2. Measure it with ffprobe and FFmpeg:
+   - length in seconds, width, height, frame rate
+   - hard cuts: run FFmpeg's scene detection (select='gt(scene,0.3)' with showinfo) and count the cuts. Write cuts per second and the average shot length in seconds.
+   - loudness: run FFmpeg's ebur128 filter and write the integrated loudness in LUFS.
+3. Take frames: one frame every second as JPEG into "references/frames/<video id>/". Look at the frames yourself.
+4. Transcribe it: whisper "<file>" --model small --word_timestamps True --output_format json --output_dir references/transcripts
+   (or npx hyperframes transcribe "<file>" if only whisper.cpp is installed). The first run downloads the speech model once.
+
+Then write "references/STYLE.md" in plain English with these sections. Give a measured number wherever you have one, and mark guesses as guesses:
+- Cut pace: cuts per second and average shot length for each reel, then the average.
+- Captions: font family (your best guess, plus a free look-alike from Google Fonts), size as a share of the frame height, position on screen, text and highlight colours, outline or box, words per caption, upper or lower case, how words appear (pop, fade, word by word).
+- Colours: the 4 to 6 main colours as hex codes, and the overall look (warm, cool, contrasty, muted).
+- Motion graphics: what moves on screen besides the person (zooms, punch-ins, arrows, emoji, b-roll, screen recordings, transitions) and how often.
+- Music and sound: integrated loudness, and what you can tell from the frames and the transcript. You cannot hear the audio, so say so, and leave a line for me to fill in the music feel.
+- Hook: the first 3 seconds of each reel (the words said, the text on screen, what the first frame shows) and the pattern they share.
+- A short recipe: 5 to 8 bullet rules for my edits that follow from the above.
+
+Put this line at the top of STYLE.md, word for word:
+"Learn from them, don't copy them: no copied footage, text or logos in my edits."
+
+At the end, show me the recipe and tell me: "Your style is saved in references/STYLE.md. Put your video in raw clips (or write an animation idea) and paste prompt 3." Also remind me that downloading other people's reels is only for my private study.
+
+My reels:
+1.
+2.
+3.
+4.
+5.

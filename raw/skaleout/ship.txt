@@ -1,0 +1,165 @@
+Skip to the prompt
+
+free tutorial · part 1 of cool AI tools in under a minute
+
+Put any site online in seconds
+
+With Claude Code and a free host
+
+Every site Claude Code builds for you gets a public link anyone can open. Free plan, nothing to pay, one prompt: Claude installs the tool, you log in once, and from then on you just say "put it online".
+
+Get the prompt
+From the reel
+One link, live
+Pick your host
+
+Both are free, both give every site its own address with HTTPS, and both keep the same link when you update. One difference decides it.
+
+Vercel
+
+For personal projects. The free Hobby plan is for personal, non commercial use.
+
+Your link: your-site.vercel.app
+
+Netlify
+
+For a page that sells something. The free plan allows commercial use: 300 credits a month, a production deploy costs 15, so about 20 updates a month.
+
+Your link: your-site.netlify.app
+
+The prompt
+
+Pick your host, tap Copy, paste it into Claude Code opened on the folder of your site, send. It works in a brand new chat: everything it needs is in the prompt. The box scrolls, and Copy always takes the whole prompt.
+
+Vercel
+Netlify
+vercel.txt
+Copy
+Put the website in this folder online on a public link with Vercel (free hosting). This chat is open on the folder that holds my website. Work only in this folder: do not change or delete anything outside it, and do not change my website's files unless a step below says so.
+
+1. Check the folder. Look at what is in it and tell me in one line what you found. If there is no index.html and no package.json, stop and tell me: "This folder has no website yet. Ask me to build one first."
+
+2. Check Node.js. Run: node --version
+   Vercel's command line tool needs Node.js 20 or newer. If node is missing or older, stop and tell me: "Install Node.js from https://nodejs.org (the LTS download), then quit and reopen this app, open the same folder and paste this prompt again." Never ask for or type my computer password.
+
+3. Install the Vercel command line tool: npm i -g vercel
+   Then check it: vercel --version
+   If the install fails with a permission error (EACCES), do not use sudo. Use "npx vercel@latest" in place of "vercel" in every command below instead.
+
+4. Log in. Run: vercel whoami
+   If it prints a user name, I am logged in: go to step 5. If not, run: vercel login
+   Let it wait for me for up to 10 minutes. It opens my browser, or prints a link and a code. Tell me: "Log in or sign up in the browser window (the free Hobby plan is enough) and approve the login." If no browser opened, show me the link and the code it printed. Never ask me for a password or a token in this chat.
+
+5. Deploy this folder to production. Run, inside this folder: vercel deploy --prod --yes
+   The first time, this creates a Vercel project named after this folder and links the folder to it (it adds a ".vercel" folder; if this folder is a git repository, make sure ".vercel" is listed in .gitignore). If it asks for a team or scope, pick my personal account. If it fails, read the error. If the error is in my website's code, fix it and run the deploy once more. If it still fails, tell me the error in plain words.
+
+6. Give me the live link. The link to share is the production address: the short one ending in .vercel.app that the output shows as the production URL or alias (like https://my-site.vercel.app). Do not give me the long one-off deployment URL: that one asks visitors to log in to Vercel. If you only see the long one, run: vercel inspect <that URL>
+   and take the short .vercel.app address from its aliases. Check the short address with: curl -sI <link>
+   It should answer 200. Then write: "Your site is live: <link>"
+
+7. Save a note so next time takes one sentence. Add the lines below to the end of my global Claude Code memory file ~/.claude/CLAUDE.md (create the file if it does not exist, keep everything already in it, and add the lines only if they are not there yet):
+
+## Put it online
+When I say "put it online", deploy the current folder to production with Vercel: run "vercel deploy --prod --yes" in that folder and reply with the production link (the short .vercel.app address, not the long deployment URL). Later deploys of the same folder update the same link. If I am logged out, run "vercel login" first and wait for me to approve it in the browser.
+
+If you are a coding agent other than Claude Code, save the same lines in your own global memory or instructions file instead and tell me which file you used.
+
+Last, tell me: "Done. From now on, change your site and say: put it online."
+
+
+What it does: checks Node.js, installs the host's free command line tool, has you log in once in your browser, puts the folder online, replies with the link, and saves a short note in your Claude Code memory (~/.claude/CLAUDE.md) so that "put it online" works in every chat after this one. It also works in Codex, Gemini CLI or any coding agent that can run commands: that agent saves the note in its own instructions file.
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Step by step
+
+Six steps. The first time takes a few minutes because of the login. After that it is one sentence.
+
+Have a folder with your site
+
+Any folder with an index.html works, or a project Claude built for you (a React or Vite app is fine too). No site yet? Open Claude Code in an empty folder and ask for one, for example:
+
+"Build a one page portfolio site in plain HTML and CSS in this folder: my name, a short intro, three projects and a contact link."
+
+Tip One folder per site. Each folder gets its own link.
+
+Open Claude Code in that folder
+
+In the Claude desktop app (claude.com/download): click the Code tab, pick Local in the environment control under the prompt box, then the folder control next to it, Open folder…, and choose your site's folder. In a terminal: go into the folder with cd and run claude.
+
+Tip Check the folder name Claude Code shows before you paste. The prompt puts online whatever folder the chat is open on.
+
+Paste the prompt and send
+
+Copy the prompt for your host from above, paste it, send. Claude checks Node.js and installs the host's tool. It asks before it runs a command, so read and allow.
+
+Tip Claude says Node.js is missing? Install the LTS version from nodejs.org, quit and reopen the app, open the same folder and paste the prompt again.
+
+Log in once when the browser opens
+
+A browser window opens on Vercel or Netlify. Log in, or sign up for free (Vercel: the Hobby plan, Netlify: the Free plan), and approve the login. Claude waits for you and then carries on by itself.
+
+Tip No window opened? Claude shows a link (on Vercel also a short code): open the link yourself. Took too long and it stopped waiting? Type "try the login again".
+
+Get your link
+
+Claude replies with your public address: your-site.vercel.app or your-site.netlify.app, with HTTPS. Open it on your phone and send it to anyone.
+
+Tip On Netlify, new accounts start every new project as private, so others see an "access" page. Claude then gives you the settings link: choose Public once and save.
+
+Later: change the site, say "put it online"
+
+Ask Claude for any change, then say "put it online". The new version shows up on the same link. This works in every new chat too, because the prompt saved the instruction in your Claude Code memory.
+
+Tip Put the wrong folder online? Open Claude Code on the right folder and say "put it online". Delete the wrong project in your host's dashboard, in that project's settings.
+
+Without Claude
+
+Netlify Drop puts a folder online with no tools at all.
+
+Open app.netlify.com/drop.
+Drag your site's folder (the one with index.html in it) onto the page.
+You get a netlify.app link in seconds.
+
+Tip Without an account, the link starts behind a temporary password. Log in or sign up for free right away to claim the site and keep it. Netlify only builds an app for you when you are logged in, so without an account drop the finished files (for an app, its dist folder).
+
+Questions
+Does it cost money?
+
+The hosting is free on both: Vercel's Hobby plan and Netlify's Free plan, with no payment for this method. Each free plan has monthly limits (on Netlify about 20 updates a month, see above). Claude Code itself needs a paid Claude plan (Pro or higher), see claude.com/pricing.
+
+Can I sell something on my page?
+
+On Netlify, yes: its free plan allows commercial use. Vercel's free Hobby plan is for personal, non commercial projects only, so a page that sells something belongs on Netlify (or on a paid Vercel plan).
+
+Can I use my own domain?
+
+Yes, both hosts allow your own domain on the free plan. That is part two of this series: Claude connects your domain for you. Follow so you see it.
+
+Does it work with Codex or Gemini CLI?
+
+Yes. The prompt only uses normal commands, so any coding agent that can run commands in your folder can follow it: paste the same prompt. That agent saves the "put it online" note in its own instructions file and tells you which one.
+
+It says the build failed. What now?
+
+Type "fix the error and put it online again". Claude reads the error and fixes your site. A failed deploy never replaces what is already live, so your link keeps showing the last version that worked.
+
+Part two: your own domain
+
+Next in the series: your own domain on this same site. Follow @skaleout on Instagram so you see it, or get part two and the next tools in your inbox below.
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter

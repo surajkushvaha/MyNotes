@@ -1,0 +1,184 @@
+Skip to the install steps
+
+free tutorial · one free skill
+
+Make Claude write like a human
+
+With Claude and the free Humanizer skill
+
+Paste any text and Claude rewrites it so it stops sounding like AI. It keeps what you said and cuts the tells people spot in one line. Install it once, in Claude Code or in the Claude app.
+
+Get the skill
+The skill
+
+Humanizer is a free, open source skill by blader on GitHub (github.com/blader/humanizer, MIT licence). A skill is a set of written rules Claude reads when it needs them. Pick the place you use Claude in the guide below.
+
+Download the skill (ZIP)
+
+Or open github.com/blader/humanizer, click the green Code button, then Download ZIP. Once it is installed (the guide below), use it anywhere with this prompt in a new chat:
+
+Anywhere: copy this prompt
+
+Works in the Claude app and in Claude Code. Put your text in place of the brackets. The sample of your own writing is optional: with it, the rewrite sounds more like you.
+
+prompt.txt
+humanizer
+Copy
+Use the humanizer skill to rewrite the text below so it sounds like a person wrote it. Keep every fact and every claim. Cut the signs of AI writing: AI words like delve and tapestry, lists of three by habit, summary lines at the end, "it's not X, it's Y" lines and long dashes. If I give you a sample of my own writing, match its voice.
+
+My text:
+[paste your text here]
+
+A sample of my writing (optional):
+[paste 2 or 3 paragraphs you wrote yourself, or delete these two lines]
+
+What you get back. Claude shows a first rewrite, a short note on what still sounds artificial, and the final version. Copy the final one. Want a different take? Send "Rewrite it again, shorter" or "Keep more of my wording".
+
+Get 30 bonus animation styles and new freebies when I create them!
+
+Leave this empty 
+Sign me up
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+The guide
+Claude Code
+Claude app (claude.ai)
+Install it in Claude Code
+Open Claude Code
+
+Open your terminal and type claude, or open Claude Code in your editor.
+
+Tip The install needs Claude Code 2.1.142 or newer. Check with claude --version in your terminal and update with claude update.
+
+Add the skill's marketplace
+
+Type this into Claude Code and press Enter.
+
+in Claude Code
+Copy
+/plugin marketplace add blader/humanizer
+
+Install the skill
+
+Then type this and press Enter.
+
+in Claude Code
+Copy
+/plugin install humanizer@humanizer
+
+Tip Type /humanizer to check it is there. If it does not show up, quit Claude Code and start it again.
+
+Older Claude Code? Use this instead
+
+If you cannot update, run this in your terminal (not inside Claude Code). It needs Node.js.
+
+in your terminal
+Copy
+npx skills add blader/humanizer --global --agent claude-code
+
+Install it in the Claude app (claude.ai)
+
+Uploading your own skills needs a paid plan (Pro or higher) and code execution turned on.
+
+Turn on code execution
+
+In claude.ai go to Settings > Capabilities and switch on Code execution and file creation. In the newer settings layout it is called Create and edit files.
+
+Download the skill
+
+Open github.com/blader/humanizer, click the green Code button, then Download ZIP. Keep the ZIP as it is.
+
+Upload it
+
+In claude.ai go to Customize > Skills. Click +, then Create skill, then Upload a skill, and pick the ZIP. Humanizer shows up in your list: make sure its switch is on.
+
+Tip If the upload says the folder name does not match the skill name: unzip the file, rename the folder that holds SKILL.md from humanizer-main to humanizer, zip that folder again (Mac: right-click, Compress; Windows: right-click, Send to, Compressed folder) and upload the new ZIP.
+
+Then use it in Claude Code
+
+Start a new chat and give it your text.
+
+In Claude Code: type the skill's name
+
+Type /humanizer, paste your text under it and send.
+
+in Claude Code
+Copy
+/humanizer
+
+[paste your text here]
+
+Before and after
+
+The post from the reel. Red marks the signs of AI writing.
+
+Before sounds like AI
+
+In today's fast-paced world, AI is reshaping how we create. Let's delve into the rich tapestry of tools that make work seamless, efficient and scalable  because the future is already here. Ultimately, it's not just about tools, it's about transformation.
+
+After sounds like a person
+
+I use AI every day now. Here are the three tools I open first, and what each one is actually good for.
+
+The red bar in the before text stands for a long dash (the em dash), which AI puts everywhere. The before post was written for the reel as a typical AI post; the after follows the skill's rules. Your own rewrite will read differently: every run is new.
+
+The signs it removes
+
+Wikipedia's editors keep a public list of the signs of AI writing: Wikipedia: Signs of AI writing. Humanizer turns that list into rules. The five you see most:
+
+AI words
+
+Words people rarely use but AI loves: delve, tapestry, seamless, testament, landscape, showcasing. The skill swaps them for plain words.
+
+Everything in threes
+
+"Seamless, efficient and scalable." AI lists three things by habit. The skill keeps as many items as the point needs.
+
+Summary endings
+
+A big closing line after every paragraph: "Ultimately...", "Let that sink in." The skill ends on the last real fact instead.
+
+"It's not X, it's Y"
+
+A contrast nobody asked for: "It's not just about tools, it's about transformation." The skill says the point directly.
+
+Long dashes everywhere
+
+The em dash used to join every other clause. The skill uses periods, commas or colons, and keeps dashes only if your own writing sample uses them.
+
+It checks 26 patterns in all; the full list is in the skill's README.
+
+Questions
+Does it cost money?
+
+The skill is free and open source (MIT licence). You need Claude itself: Claude Code, or a paid Claude plan to upload skills in the Claude app.
+
+Will it get my text past AI detectors?
+
+No, and it does not try to. It rewrites for human readers. Its own README says detectors still flag most of its output.
+
+Will it change what I said?
+
+It keeps every claim from your text and changes how it is said. Read the final version before you post it, and tell Claude what to put back if something is missing.
+
+I like my dashes. Can I keep them?
+
+Yes. Add a sample of your own writing to the prompt. The skill follows the sample's rhythm, words and punctuation, dashes included.
+
+Claude did not use the skill. What now?
+
+In the Claude app check that Humanizer is switched on under Customize > Skills and that code execution is on, then name the skill in your message, as the prompt above does. In Claude Code type /humanizer at the start of the message.
+
+Get the next one by email
+
+Leave your email and I'll send you the next tutorial when it's out. You also get the Style Pack right away: 30 new styles that aren't in any of my reels. Free.
+
+Leave this empty 
+Send me the next one
+
+Email me new tutorials from Skale Out. Unsubscribe any time with one click.
+
+Made by Jan, Skale Out · Newsletter
+
+Humanizer is made by blader and shared under the MIT licence. This page links to it and does not host its files.
