@@ -6,6 +6,7 @@ on:
     paths:
       - ".github/workflows/crawl-skaleout.yml"
       - "scripts/crawl_skaleout.py"
+      - "scripts/snapshot_variants.py"
 
 permissions:
   contents: write
@@ -25,6 +26,8 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Crawl site
         run: python scripts/crawl_skaleout.py
+      - name: Capture style/format variants
+        run: python scripts/snapshot_variants.py
       - name: Commit raw pages
         run: |
           git config user.name "github-actions[bot]"
