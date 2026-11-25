@@ -1,0 +1,34 @@
+name: Crawl learn.skaleout.com
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/crawl-skaleout.yml"
+      - "scripts/crawl_skaleout.py"
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright + Chromium
+        run: |
+          pip install playwright==1.47.0
+          python -m playwright install --with-deps chromium
+      - name: Crawl site
+        run: python scripts/crawl_skaleout.py
+      - name: Commit raw pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add raw/skaleout
+          git commit -m "Add raw crawl of learn.skaleout.com" || echo "nothing to commit"
+          git push
