@@ -24,6 +24,8 @@ jobs:
         run: python scripts/crawl_skaleout.py
       - name: Capture style/format variants
         run: python scripts/snapshot_variants.py
+      - name: Download and unpack zip files
+        run: python scripts/fetch_zips.py
       - name: Build prompts folder
         run: python scripts/build_prompts.py
       - name: Commit raw pages and prompts
