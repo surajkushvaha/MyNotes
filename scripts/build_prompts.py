@@ -67,6 +67,50 @@ NOTES = {
 }
 
 
+ZIPS = os.path.join(RAW, "zips")
+
+# Files inside the downloaded zips that add new text (the 6 single-skill zips on /skills
+# repeat the SKILL.md text already on the page, so they are only copied, not listed twice).
+# page path -> [(zip folder, file inside it, prompt name, description, kind)]
+ZIP_PROMPTS = {
+    "/draw": [
+        ("draw__animation-skill", "animation/SKILL.md", "/animation skill (full SKILL.md)",
+         "The skill inside animation-skill.zip: how Claude plans, draws, voices and renders the MP4.", "skill"),
+        ("draw__animation-skill", "animation/README.md", "animation-skill.zip README",
+         "Setup and usage notes that ship with the skill.", "doc"),
+    ],
+    "/poster": [
+        ("poster__poster-prompt-skill", "poster-prompt/SKILL.md", "/poster-prompt skill (full SKILL.md)",
+         "The skill inside poster-prompt-skill.zip: Claude picks the six fields and writes the poster prompt for you.",
+         "skill"),
+    ],
+    "/human": [
+        ("human__humanizer", "humanizer-main/SKILL.md", "Humanizer skill (full SKILL.md)",
+         "The Humanizer skill by blader (MIT licence), from the GitHub zip the tutorial links to.", "skill"),
+    ],
+}
+
+# Whole skill folders copied next to the prompts so they can be downloaded and installed.
+# page path -> [(zip folder, sub folder or file inside it, target folder under skill-files/)]
+ZIP_COPY = {
+    "/draw": [("draw__animation-skill", "animation", "animation")],
+    "/poster": [("poster__poster-prompt-skill", "poster-prompt", "poster-prompt")],
+    "/skills": [("skills__motion-skills", n, n) for n in
+                ("isometric", "globe", "scale", "bar-race", "versus", "zack-d-films")],
+    "/human": [("human__humanizer", "humanizer-main/SKILL.md", "humanizer"),
+               ("human__humanizer", "humanizer-main/LICENSE", "humanizer")],
+}
+
+
+def zip_downloads(path):
+    """Original zip links for a page, from raw/skaleout/zips/_zips.json."""
+    try:
+        manifest = json.load(open(os.path.join(ZIPS, "_zips.json"), encoding="utf-8"))
+    except FileNotFoundError:
+        return []
+    return [u for u, v in manifest.items() if v.get("page") == page_file(path)]
+
+
 def slugify(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:60]
 
@@ -165,10 +209,29 @@ def main():
         md = soup.find("meta", attrs={"name": "description"})
         tdesc = md["content"] if md else ""
         items = collect(path, soup, variants)
+        for zfolder, zfile, name, desc, kind in ZIP_PROMPTS.get(path, []):
+            zp = os.path.join(ZIPS, zfolder, zfile)
+            if os.path.exists(zp):
+                items.append({"name": name, "description": desc, "kind": kind,
+                              "text": open(zp, encoding="utf-8").read()})
         tdir = os.path.join(OUT, cat, tslug)
         os.makedirs(tdir, exist_ok=True)
+        skill_files = []
+        for zfolder, sub, target in ZIP_COPY.get(path, []):
+            src = os.path.join(ZIPS, zfolder, sub)
+            dst = os.path.join(tdir, "skill-files", target)
+            if os.path.isdir(src):
+                shutil.copytree(src, dst, dirs_exist_ok=True)
+            elif os.path.isfile(src):
+                os.makedirs(dst, exist_ok=True)
+                shutil.copy2(src, dst)
+            else:
+                continue
+            for root, _, files in os.walk(dst):
+                skill_files += [os.path.join(root, f).replace(os.sep, "/") for f in sorted(files)]
         tut = {"id": tslug, "title": title, "description": tdesc, "url": BASE + path,
-               "note": NOTES.get(path, ""), "prompts": []}
+               "note": NOTES.get(path, ""), "downloads": zip_downloads(path),
+               "skill_files": sorted(set(skill_files)), "prompts": []}
         for n, it in enumerate(items, 1):
             fname = f"{n:02d}-{slugify(it['name'])}.md"
             fpath = os.path.join(tdir, fname)
@@ -206,6 +269,16 @@ def main():
                 rel = os.path.relpath(p["file"], os.path.join(OUT, c["id"])).replace(os.sep, "/")
                 cr.append(f"- [{p['name']}]({rel})" + (f": {p['description']}" if p["description"] else ""))
             cr.append("")
+            if t["skill_files"]:
+                cr.append("Skill files (unpacked from the zip downloads, ready to drop into `~/.claude/skills/`):")
+                cr.append("")
+                for sf in t["skill_files"]:
+                    rel = os.path.relpath(sf, os.path.join(OUT, c["id"])).replace(os.sep, "/")
+                    cr.append(f"- [{rel.split('skill-files/', 1)[1]}]({rel})")
+                cr.append("")
+            if t["downloads"]:
+                cr.append("Original downloads: " + ", ".join(f"[{u.rsplit('/', 1)[1]}]({u})" for u in t["downloads"]))
+                cr.append("")
         toc.append("")
         with open(os.path.join(OUT, c["id"], "README.md"), "w", encoding="utf-8") as f:
             f.write("\n".join(cr))

@@ -26,3 +26,10 @@ One free prompt for ChatGPT: attach a plain product photo, paste the prompt, and
 Source: https://learn.skaleout.com/poster
 
 - [The prompt](product-poster/01-the-prompt.md)
+- [/poster-prompt skill (full SKILL.md)](product-poster/02-poster-prompt-skill-full-skill-md.md): The skill inside poster-prompt-skill.zip: Claude picks the six fields and writes the poster prompt for you.
+
+Skill files (unpacked from the zip downloads, ready to drop into `~/.claude/skills/`):
+
+- [poster-prompt/SKILL.md](product-poster/skill-files/poster-prompt/SKILL.md)
+
+Original downloads: [poster-prompt-skill.zip](https://learn.skaleout.com/poster/poster-prompt-skill.zip)

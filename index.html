@@ -49,6 +49,9 @@
   .tut .desc { margin: 0; color: var(--muted); font-size: .93rem; }
   .tut .src { font-size: .85rem; color: var(--accent); text-decoration: none; }
   .note { background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; font-size: .88rem; margin-top: 8px; }
+  .files { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: .84rem; margin-top: 8px; }
+  .files a { color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
+  .files .flabel { color: var(--muted); font-weight: 600; }
   details.p { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }
   details.p summary { cursor: pointer; display: flex; align-items: center; gap: 8px; list-style: none; }
   details.p summary::-webkit-details-marker { display: none; }
@@ -180,6 +183,25 @@
         var a = el("a", "src", "Source: " + t.url.replace("https://", "")); a.href = t.url;
         a.target = "_blank"; a.rel = "noopener"; card.appendChild(a);
         if (t.note) card.appendChild(el("div", "note", "Note: " + t.note));
+        if ((t.skill_files && t.skill_files.length) || (t.downloads && t.downloads.length)) {
+          var files = el("div", "files");
+          if (t.skill_files && t.skill_files.length) {
+            files.appendChild(el("span", "flabel", "Skill files: "));
+            t.skill_files.forEach(function (sf) {
+              var fa = el("a", null, sf.split("skill-files/")[1]);
+              fa.href = REPO + sf; fa.target = "_blank"; fa.rel = "noopener";
+              files.appendChild(fa);
+            });
+          }
+          if (t.downloads && t.downloads.length) {
+            files.appendChild(el("span", "flabel", "Zip: "));
+            t.downloads.forEach(function (u) {
+              var da = el("a", null, u.split("/").pop()); da.href = u; da.target = "_blank"; da.rel = "noopener";
+              files.appendChild(da);
+            });
+          }
+          card.appendChild(files);
+        }
         prompts.forEach(function (p) {
           var det = el("details", "p");
           if (term && !tutHit) det.open = true;
