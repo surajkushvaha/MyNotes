@@ -1,0 +1,39 @@
+# Prompt for Vercel
+
+- **Category:** Claude Code workflows
+- **Tutorial:** Put any site online in seconds
+- **Type:** prompt
+- **Source:** https://learn.skaleout.com/ship
+
+```text
+Put the website in this folder online on a public link with Vercel (free hosting). This chat is open on the folder that holds my website. Work only in this folder: do not change or delete anything outside it, and do not change my website's files unless a step below says so.
+
+1. Check the folder. Look at what is in it and tell me in one line what you found. If there is no index.html and no package.json, stop and tell me: "This folder has no website yet. Ask me to build one first."
+
+2. Check Node.js. Run: node --version
+   Vercel's command line tool needs Node.js 20 or newer. If node is missing or older, stop and tell me: "Install Node.js from https://nodejs.org (the LTS download), then quit and reopen this app, open the same folder and paste this prompt again." Never ask for or type my computer password.
+
+3. Install the Vercel command line tool: npm i -g vercel
+   Then check it: vercel --version
+   If the install fails with a permission error (EACCES), do not use sudo. Use "npx vercel@latest" in place of "vercel" in every command below instead.
+
+4. Log in. Run: vercel whoami
+   If it prints a user name, I am logged in: go to step 5. If not, run: vercel login
+   Let it wait for me for up to 10 minutes. It opens my browser, or prints a link and a code. Tell me: "Log in or sign up in the browser window (the free Hobby plan is enough) and approve the login." If no browser opened, show me the link and the code it printed. Never ask me for a password or a token in this chat.
+
+5. Deploy this folder to production. Run, inside this folder: vercel deploy --prod --yes
+   The first time, this creates a Vercel project named after this folder and links the folder to it (it adds a ".vercel" folder; if this folder is a git repository, make sure ".vercel" is listed in .gitignore). If it asks for a team or scope, pick my personal account. If it fails, read the error. If the error is in my website's code, fix it and run the deploy once more. If it still fails, tell me the error in plain words.
+
+6. Give me the live link. The link to share is the production address: the short one ending in .vercel.app that the output shows as the production URL or alias (like https://my-site.vercel.app). Do not give me the long one-off deployment URL: that one asks visitors to log in to Vercel. If you only see the long one, run: vercel inspect <that URL>
+   and take the short .vercel.app address from its aliases. Check the short address with: curl -sI <link>
+   It should answer 200. Then write: "Your site is live: <link>"
+
+7. Save a note so next time takes one sentence. Add the lines below to the end of my global Claude Code memory file ~/.claude/CLAUDE.md (create the file if it does not exist, keep everything already in it, and add the lines only if they are not there yet):
+
+## Put it online
+When I say "put it online", deploy the current folder to production with Vercel: run "vercel deploy --prod --yes" in that folder and reply with the production link (the short .vercel.app address, not the long deployment URL). Later deploys of the same folder update the same link. If I am logged out, run "vercel login" first and wait for me to approve it in the browser.
+
+If you are a coding agent other than Claude Code, save the same lines in your own global memory or instructions file instead and tell me which file you used.
+
+Last, tell me: "Done. From now on, change your site and say: put it online."
+```

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prompt Library</title>
+<meta name="description" content="Every prompt from learn.skaleout.com, sorted by category, searchable and ready to copy.">
+<style>
+  :root {
+    --bg: #f7f6f3; --card: #ffffff; --text: #1d1d1f; --muted: #6b6b70; --line: #e4e2dc;
+    --accent: #c2410c; --accent-soft: #fdeee6; --code: #f3f1ec; --chip: #ecebe6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141416; --card: #1d1d20; --text: #ececee; --muted: #9b9ba3; --line: #2e2e33;
+      --accent: #fb923c; --accent-soft: #3a2418; --code: #232327; --chip: #29292e;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #141416; --card: #1d1d20; --text: #ececee; --muted: #9b9ba3; --line: #2e2e33;
+    --accent: #fb923c; --accent-soft: #3a2418; --code: #232327; --chip: #29292e;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 80px; }
+  header h1 { font-size: 1.9rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+  header p { margin: 0; color: var(--muted); }
+  header a { color: var(--accent); }
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 14px 0 10px;
+    border-bottom: 1px solid var(--line); margin-bottom: 18px; }
+  .search { display: flex; gap: 8px; }
+  .search input { flex: 1; min-width: 0; font: inherit; padding: 10px 14px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--card); color: var(--text); }
+  .search input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .theme { font: inherit; border: 1px solid var(--line); background: var(--card); color: var(--text);
+    border-radius: 10px; padding: 0 12px; cursor: pointer; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .chip { font: inherit; font-size: .88rem; border: 0; border-radius: 999px; padding: 5px 12px;
+    background: var(--chip); color: var(--text); cursor: pointer; }
+  .chip[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .count { color: var(--muted); font-size: .85rem; margin-top: 8px; }
+  section.cat { margin: 28px 0 10px; }
+  section.cat > h2 { font-size: 1.35rem; margin: 0 0 2px; }
+  section.cat > p { margin: 0 0 12px; color: var(--muted); }
+  .tut { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 16px;
+    margin: 12px 0; }
+  .tut h3 { margin: 0 0 4px; font-size: 1.1rem; }
+  .tut .desc { margin: 0; color: var(--muted); font-size: .93rem; }
+  .tut .src { font-size: .85rem; color: var(--accent); text-decoration: none; }
+  .note { background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; font-size: .88rem; margin-top: 8px; }
+  details.p { border-top: 1px solid var(--line); margin-top: 10px; padding-top: 10px; }
+  details.p summary { cursor: pointer; display: flex; align-items: center; gap: 8px; list-style: none; }
+  details.p summary::-webkit-details-marker { display: none; }
+  details.p summary::before { content: "▸"; color: var(--muted); transition: transform .15s; }
+  details.p[open] summary::before { transform: rotate(90deg); }
+  .pname { font-weight: 600; flex: 1; min-width: 0; }
+  .kind { font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted);
+    border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; }
+  .pdesc { color: var(--muted); font-size: .88rem; margin: 6px 0 0 20px; }
+  .box { position: relative; margin: 8px 0 4px 20px; }
+  pre { margin: 0; background: var(--code); border-radius: 10px; padding: 14px; padding-top: 40px;
+    white-space: pre-wrap; word-wrap: break-word; font: 13.5px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    max-height: 520px; overflow: auto; }
+  .copy { position: absolute; top: 8px; right: 8px; font: inherit; font-size: .82rem; border: 0;
+    border-radius: 8px; padding: 4px 12px; background: var(--accent); color: #fff; cursor: pointer; }
+  .copy.done { background: #15803d; }
+  .links { font-size: .8rem; margin: 4px 0 0 20px; }
+  .links a { color: var(--muted); }
+  mark { background: #fde68a; color: inherit; border-radius: 2px; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 0; }
+  @media (max-width: 560px) {
+    header h1 { font-size: 1.5rem; }
+    .box, .pdesc, .links { margin-left: 0; }
+    pre { font-size: 12.5px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Prompt Library</h1>
+    <p>Every prompt from <a href="https://learn.skaleout.com" target="_blank" rel="noopener">learn.skaleout.com</a>, sorted by category. Search, open, copy.</p>
+  </header>
+  <div class="bar">
+    <div class="search">
+      <input id="q" type="search" placeholder="Search prompts, styles, tutorials…" autocomplete="off">
+      <button class="theme" id="theme" title="Toggle dark mode" aria-label="Toggle dark mode">◐</button>
+    </div>
+    <div class="chips" id="cats"></div>
+    <div class="count" id="count"></div>
+  </div>
+  <main id="list"><p class="empty">Loading…</p></main>
+</div>
+<script>
+(function () {
+  "use strict";
+  var data = null, activeCat = "all";
+  var REPO = "https://github.com/surajkushvaha/MyNotes/blob/main/";
+  var list = document.getElementById("list");
+  var q = document.getElementById("q");
+  var cats = document.getElementById("cats");
+  var count = document.getElementById("count");
+
+  // theme toggle, remembered per browser
+  var root = document.documentElement;
+  try { var t = localStorage.getItem("theme"); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById("theme").onclick = function () {
+    var dark = root.dataset.theme ? root.dataset.theme === "dark"
+      : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+  };
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function highlight(node, text, term) {
+    if (!term) { node.textContent = text; return; }
+    var lower = text.toLowerCase(), i = 0, j;
+    node.textContent = "";
+    while ((j = lower.indexOf(term, i)) !== -1) {
+      node.appendChild(document.createTextNode(text.slice(i, j)));
+      node.appendChild(el("mark", null, text.slice(j, j + term.length)));
+      i = j + term.length;
+    }
+    node.appendChild(document.createTextNode(text.slice(i)));
+  }
+  function copy(text, btn) {
+    function ok() {
+      btn.textContent = "Copied"; btn.classList.add("done");
+      setTimeout(function () { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1600);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(ok, function () { fallback(text); ok(); });
+    } else { fallback(text); ok(); }
+  }
+  function fallback(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.left = "-9999px";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
+  function renderCats() {
+    var all = [{ id: "all", name: "All" }].concat(data.categories);
+    cats.textContent = "";
+    all.forEach(function (c) {
+      var b = el("button", "chip", c.name);
+      b.type = "button";
+      b.setAttribute("aria-pressed", String(c.id === activeCat));
+      b.onclick = function () { activeCat = c.id; renderCats(); render(); };
+      cats.appendChild(b);
+    });
+  }
+
+  function render() {
+    var term = q.value.trim().toLowerCase();
+    var shown = 0;
+    list.textContent = "";
+    data.categories.forEach(function (c) {
+      if (activeCat !== "all" && activeCat !== c.id) return;
+      var sec = el("section", "cat"), any = false;
+      sec.appendChild(el("h2", null, c.name));
+      sec.appendChild(el("p", null, c.description));
+      c.tutorials.forEach(function (t) {
+        var tutHit = !term || t.title.toLowerCase().indexOf(term) !== -1;
+        var prompts = t.prompts.filter(function (p) {
+          return tutHit || (p.name + " " + p.description + " " + p.text).toLowerCase().indexOf(term) !== -1;
+        });
+        if (!prompts.length) return;
+        any = true; shown += prompts.length;
+        var card = el("div", "tut");
+        var h = el("h3"); highlight(h, t.title, term); card.appendChild(h);
+        var d = el("p", "desc"); highlight(d, t.description, term); card.appendChild(d);
+        var a = el("a", "src", "Source: " + t.url.replace("https://", "")); a.href = t.url;
+        a.target = "_blank"; a.rel = "noopener"; card.appendChild(a);
+        if (t.note) card.appendChild(el("div", "note", "Note: " + t.note));
+        prompts.forEach(function (p) {
+          var det = el("details", "p");
+          if (term && !tutHit) det.open = true;
+          var sum = el("summary");
+          var name = el("span", "pname"); highlight(name, p.name, term); sum.appendChild(name);
+          sum.appendChild(el("span", "kind", p.kind));
+          det.appendChild(sum);
+          if (p.description) det.appendChild(el("p", "pdesc", p.description));
+          var box = el("div", "box");
+          var pre = el("pre");
+          var btn = el("button", "copy", "Copy"); btn.type = "button";
+          btn.onclick = function () { copy(p.text, btn); };
+          box.appendChild(btn); box.appendChild(pre); det.appendChild(box);
+          var links = el("div", "links");
+          var f = el("a", null, p.file); f.href = REPO + p.file; f.target = "_blank"; f.rel = "noopener"; links.appendChild(f);
+          det.appendChild(links);
+          // fill the prompt text lazily, the first time it is opened
+          var filled = false;
+          function fill() { if (!filled) { highlight(pre, p.text, term); filled = true; } }
+          if (det.open) fill();
+          det.addEventListener("toggle", fill);
+          card.appendChild(det);
+        });
+        sec.appendChild(card);
+      });
+      if (any) list.appendChild(sec);
+    });
+    if (!shown) list.appendChild(el("p", "empty", "No prompts match “" + q.value + "”."));
+    count.textContent = shown + " prompt" + (shown === 1 ? "" : "s");
+  }
+
+  var timer;
+  q.addEventListener("input", function () { clearTimeout(timer); timer = setTimeout(render, 120); });
+
+  fetch("prompts/prompts.json").then(function (r) { return r.json(); }).then(function (d) {
+    data = d; renderCats(); render();
+  }).catch(function () {
+    list.textContent = "";
+    list.appendChild(el("p", "empty", "Could not load prompts/prompts.json. Open this page through GitHub Pages or a local web server."));
+  });
+})();
+</script>
+</body>
+</html>

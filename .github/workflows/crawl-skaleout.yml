@@ -1,12 +1,8 @@
 name: Crawl learn.skaleout.com
 
+# Run by hand from the Actions tab ("Run workflow") to refresh the prompt library.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/crawl-skaleout.yml"
-      - "scripts/crawl_skaleout.py"
-      - "scripts/snapshot_variants.py"
 
 permissions:
   contents: write
@@ -22,16 +18,18 @@ jobs:
           python-version: "3.12"
       - name: Install Playwright + Chromium
         run: |
-          pip install playwright==1.47.0
+          pip install playwright==1.47.0 beautifulsoup4==4.12.3
           python -m playwright install --with-deps chromium
       - name: Crawl site
         run: python scripts/crawl_skaleout.py
       - name: Capture style/format variants
         run: python scripts/snapshot_variants.py
-      - name: Commit raw pages
+      - name: Build prompts folder
+        run: python scripts/build_prompts.py
+      - name: Commit raw pages and prompts
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add raw/skaleout
-          git commit -m "Add raw crawl of learn.skaleout.com" || echo "nothing to commit"
+          git add raw/skaleout prompts
+          git commit -m "Refresh prompts from learn.skaleout.com" || echo "nothing to commit"
           git push
