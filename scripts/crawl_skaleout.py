@@ -18,6 +18,7 @@ HOST = urlparse(START).netloc
 OUT = os.path.join("raw", "skaleout")
 MAX_PAGES = int(os.environ.get("MAX_PAGES", "400"))
 SKIP_EXT = re.compile(r"\.(png|jpe?g|gif|webp|svg|ico|mp4|webm|mp3|pdf|zip|css|js|woff2?|ttf)$", re.I)
+# scripts are saved separately under raw/skaleout/assets/
 
 
 def slug_for(url: str) -> str:
@@ -29,7 +30,7 @@ def slug_for(url: str) -> str:
 
 def main() -> int:
     os.makedirs(OUT, exist_ok=True)
-    seen, queue, index = set(), deque([START]), []
+    seen, queue, index, assets = set(), deque([START]), [], set()
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(user_agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36")
@@ -46,6 +47,20 @@ def main() -> int:
                 html = page.content()
                 text = page.inner_text("body")
                 links = page.eval_on_selector_all("a[href]", "els => els.map(e => e.href)")
+                scripts = page.eval_on_selector_all("script[src]", "els => els.map(e => e.src)")
+                for src in scripts:
+                    su = urlparse(src)
+                    if su.netloc == HOST and src not in assets:
+                        assets.add(src)
+                        try:
+                            body = page.request.get(src).text()
+                            ap = os.path.join(OUT, "assets", su.path.strip("/").replace("/", "__"))
+                            os.makedirs(os.path.dirname(ap), exist_ok=True)
+                            with open(ap, "w", encoding="utf-8") as f:
+                                f.write(body)
+                            print(f"ASSET {src}")
+                        except Exception as e:
+                            print(f"FAIL asset {src}: {e}", file=sys.stderr)
             except Exception as e:  # keep crawling on single-page failures
                 print(f"FAIL {url}: {e}", file=sys.stderr)
                 index.append({"url": url, "error": str(e)})
