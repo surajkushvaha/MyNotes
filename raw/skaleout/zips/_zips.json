@@ -1,0 +1,97 @@
+{
+ "https://learn.skaleout.com/draw/animation-skill.zip": {
+  "page": "draw",
+  "folder": "draw__animation-skill",
+  "files": [
+   "animation/README.md",
+   "animation/template-audio.html",
+   "animation/scripts/render.mjs",
+   "animation/scripts/package.json",
+   "animation/scripts/sheet.mjs",
+   "animation/SKILL.md",
+   "animation/template.html"
+  ]
+ },
+ "https://github.com/blader/humanizer/archive/refs/heads/main.zip": {
+  "page": "human",
+  "folder": "human__humanizer",
+  "files": [
+   "humanizer-main/.claude-plugin/marketplace.json",
+   "humanizer-main/.claude-plugin/plugin.json",
+   "humanizer-main/.cursor-plugin/plugin.json",
+   "humanizer-main/.github/ISSUE_TEMPLATE/config.yml",
+   "humanizer-main/.github/ISSUE_TEMPLATE/new-pattern.yml",
+   "humanizer-main/.github/ISSUE_TEMPLATE/rewrite-problem.yml",
+   "humanizer-main/.github/workflows/validate.yml",
+   "humanizer-main/AGENTS.md",
+   "humanizer-main/CHANGELOG.md",
+   "humanizer-main/LICENSE",
+   "humanizer-main/README.md",
+   "humanizer-main/SKILL.md",
+   "humanizer-main/agents/openai.yaml",
+   "humanizer-main/package.json",
+   "humanizer-main/scripts/validate-package.py"
+  ]
+ },
+ "https://learn.skaleout.com/poster/poster-prompt-skill.zip": {
+  "page": "poster",
+  "folder": "poster__poster-prompt-skill",
+  "files": [
+   "poster-prompt/SKILL.md"
+  ]
+ },
+ "https://learn.skaleout.com/skills/motion-skills.zip": {
+  "page": "skills",
+  "folder": "skills__motion-skills",
+  "files": [
+   "isometric/SKILL.md",
+   "globe/SKILL.md",
+   "scale/SKILL.md",
+   "bar-race/SKILL.md",
+   "versus/SKILL.md",
+   "zack-d-films/SKILL.md"
+  ]
+ },
+ "https://learn.skaleout.com/skills/isometric.zip": {
+  "page": "skills",
+  "folder": "skills__isometric",
+  "files": [
+   "isometric/SKILL.md"
+  ]
+ },
+ "https://learn.skaleout.com/skills/globe.zip": {
+  "page": "skills",
+  "folder": "skills__globe",
+  "files": [
+   "globe/SKILL.md"
+  ]
+ },
+ "https://learn.skaleout.com/skills/scale.zip": {
+  "page": "skills",
+  "folder": "skills__scale",
+  "files": [
+   "scale/SKILL.md"
+  ]
+ },
+ "https://learn.skaleout.com/skills/bar-race.zip": {
+  "page": "skills",
+  "folder": "skills__bar-race",
+  "files": [
+   "bar-race/SKILL.md"
+  ]
+ },
+ "https://learn.skaleout.com/skills/versus.zip": {
+  "page": "skills",
+  "folder": "skills__versus",
+  "files": [
+   "versus/SKILL.md"
+  ]
+ },
+ "https://learn.skaleout.com/skills/zack-d-films.zip": {
+  "page": "skills",
+  "folder": "skills__zack-d-films",
+  "files": [
+   "zack-d-films/SKILL.md"
+  ]
+ }
+}
